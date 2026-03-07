@@ -3,98 +3,96 @@
 <html lang="cy">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 <title>Clwb Tech — Investor Clwb 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Rajdhani:wght@600;700&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#060609;color:#fff;font-family:'Space Mono',ui-monospace,monospace;min-height:100vh;overflow-x:hidden;width:100%;max-width:100%}
-button{cursor:pointer;font-family:'Space Mono',ui-monospace,monospace;border:none;background:none}
+html{overflow-x:hidden;background:#060609}
+body{background:#060609;color:#fff;font-family:'Space Mono',monospace;min-height:100vh;overflow-x:hidden;-webkit-text-size-adjust:100%}
+button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:none;-webkit-tap-highlight-color:transparent}
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-thumb{background:rgba(212,43,43,0.5);border-radius:2px}
 :root{--red:#D42B2B;--gold:#FFD700;--green:#00A651;--border:rgba(255,255,255,0.08)}
-.app{max-width:500px;margin:0 auto;min-height:100vh;background:#060609;overflow-x:hidden;width:100%}
-.header{position:sticky;top:0;z-index:100;background:rgba(6,6,9,0.97);border-bottom:1px solid var(--border);padding:12px 18px 0}
+.app{max-width:500px;width:100%;margin:0 auto;min-height:100vh;background:#060609;overflow-x:hidden;position:relative}
+.header{position:sticky;top:0;z-index:100;background:rgba(6,6,9,0.97);border-bottom:1px solid var(--border);padding:12px 18px 0;width:100%}
 .header-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:26px;letter-spacing:2px;line-height:1}
 .logo-sub{font-size:8px;letter-spacing:2px;color:rgba(255,215,0,0.6)}
 .live-dot{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
 .live-label{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.3);margin-left:6px}
-.nav{display:flex}
-.nav-btn{flex:1;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,0.3);padding:8px 4px 10px;transition:all 0.2s;font-size:8px;letter-spacing:0.5px;font-family:'Space Mono',monospace;background:none;cursor:pointer}
+.nav{display:flex;width:100%}
+.nav-btn{flex:1;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,0.3);padding:8px 2px 10px;transition:color 0.2s,border-color 0.2s;font-size:8px;letter-spacing:0.5px;font-family:'Space Mono',monospace;background:none;cursor:pointer;text-align:center}
 .nav-btn.active{color:#fff;border-bottom-color:var(--red)}
-.nav-icon{font-size:15px;margin-bottom:2px}
-.page{padding:18px 14px 100px;display:none}
+.nav-icon{font-size:15px;margin-bottom:2px;display:block}
+.page{padding:16px 14px 100px;display:none;width:100%;overflow-x:hidden}
 .page.active{display:block}
-.card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:20px 22px;margin-bottom:14px;position:relative;overflow:hidden}
+.card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:18px 16px;margin-bottom:12px;position:relative;overflow:hidden;width:100%}
 .card-label{font-size:8px;letter-spacing:3px;color:rgba(255,255,255,0.3);margin-bottom:14px}
 .hero{background:linear-gradient(135deg,rgba(212,43,43,0.15),rgba(0,166,81,0.07));border-left:3px solid var(--red)}
-.hero-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:48px;letter-spacing:3px;line-height:0.9}
-.hero-sub{font-family:'Bebas Neue',Impact,sans-serif;font-size:13px;letter-spacing:6px;color:var(--gold);margin-top:6px}
-.hero-line{height:2px;background:linear-gradient(90deg,var(--red),rgba(255,255,255,0.4),var(--green));border-radius:1px;margin:14px 0}
+.hero-title{font-family:'Bebas Neue',Impact,sans-serif;font-size:44px;letter-spacing:3px;line-height:0.9}
+.hero-sub{font-family:'Bebas Neue',Impact,sans-serif;font-size:12px;letter-spacing:5px;color:var(--gold);margin-top:6px}
+.hero-line{height:2px;background:linear-gradient(90deg,var(--red),rgba(255,255,255,0.4),var(--green));border-radius:1px;margin:12px 0}
 .mountain-bg{position:absolute;bottom:0;left:0;width:100%;height:90px;opacity:0.07;pointer-events:none}
-.rule-row{display:flex;gap:14px;margin-bottom:13px;align-items:flex-start}
-.rule-emoji{font-size:20px;flex-shrink:0;margin-top:2px}
+.rule-row{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start}
+.rule-emoji{font-size:18px;flex-shrink:0;margin-top:2px}
 .rule-title{color:#fff;font-family:'Rajdhani',Impact,sans-serif;font-weight:700;font-size:13px}
-.rule-desc{color:rgba(255,255,255,0.4);font-size:11px;margin-top:2px}
-.members-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.member-card{background:rgba(0,166,81,0.06);border:1px solid rgba(0,166,81,0.2);border-radius:4px;padding:10px 12px}
+.rule-desc{color:rgba(255,255,255,0.4);font-size:10px;margin-top:2px}
+.members-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.member-card{background:rgba(0,166,81,0.06);border:1px solid rgba(0,166,81,0.2);border-radius:4px;padding:8px 10px}
 .member-name{font-family:'Rajdhani',Impact,sans-serif;font-weight:700;font-size:11px;color:rgba(255,255,255,0.85)}
-.member-sector{font-size:9px;color:rgba(255,255,255,0.35);line-height:1.5;margin-top:3px}
+.member-sector{font-size:8px;color:rgba(255,255,255,0.35);line-height:1.4;margin-top:3px}
+.theme-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;padding:8px 10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px}
+.theme-bar-wrap{width:60px;height:4px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;margin-top:4px}
+.theme-bar{height:100%;border-radius:3px;background:var(--red)}
 .pot-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center}
 .pot-label{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.3)}
 .pot-value{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;letter-spacing:1px;line-height:1.1}
-.funded-notice{background:rgba(0,166,81,0.08);border:1px solid rgba(0,166,81,0.3);border-radius:4px;padding:12px 16px;margin-bottom:14px;font-size:11px;color:rgba(0,166,81,0.9);line-height:1.7}
+.funded-notice{background:rgba(0,166,81,0.08);border:1px solid rgba(0,166,81,0.3);border-radius:4px;padding:12px 14px;margin-bottom:12px;font-size:11px;color:rgba(0,166,81,0.9);line-height:1.7}
 .filter-label{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.3);margin-bottom:8px}
-.filter-wrap{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px;max-width:100%}
-.filter-btn{font-size:9px;padding:4px 8px;border-radius:2px;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);font-family:'Space Mono',monospace;cursor:pointer}
+.filter-wrap{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px;width:100%}
+.filter-btn{font-size:9px;padding:4px 7px;border-radius:2px;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);font-family:'Space Mono',monospace;cursor:pointer;white-space:nowrap}
 .filter-btn.active{background:rgba(212,43,43,0.25);border-color:rgba(212,43,43,0.5);color:#fff}
-.stock-list{display:flex;flex-direction:column;gap:10px}
-.stock-card{background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:6px;padding:16px;border-left:3px solid #D42B2B}
+.stock-list{display:flex;flex-direction:column;gap:10px;width:100%}
+.stock-card{background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:6px;padding:14px;border-left:3px solid #D42B2B;width:100%}
 .stock-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
-.stock-left{display:flex;align-items:center;gap:10px}
-.stock-ticker{font-family:'Bebas Neue',Impact,sans-serif;font-size:22px;letter-spacing:1px;color:#fff;line-height:1}
-.stock-company{font-size:10px;color:rgba(255,255,255,0.45)}
-.stock-right{text-align:right}
+.stock-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.stock-ticker{font-family:'Bebas Neue',Impact,sans-serif;font-size:20px;letter-spacing:1px;color:#fff;line-height:1}
+.stock-company{font-size:9px;color:rgba(255,255,255,0.45);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stock-right{text-align:right;flex-shrink:0;margin-left:8px}
 .stock-pending{font-size:9px;color:rgba(255,215,0,0.6);letter-spacing:1px;animation:blink 2s infinite}
 .stock-alloc{font-size:10px;color:rgba(255,255,255,0.3);margin-top:2px}
-.stock-influence{font-size:11px;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:10px;font-style:italic}
-.stock-bottom{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:6px}
-.stock-members{display:flex;flex-wrap:wrap;gap:3px;max-width:100%}
-.member-tag{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.55);font-size:10px;padding:2px 7px;border-radius:2px;display:inline-block;margin:2px}
-.verdict-badge{font-size:8px;letter-spacing:1.5px;padding:2px 7px;border-radius:2px;font-weight:700}
+.stock-influence{font-size:10px;color:rgba(255,255,255,0.45);line-height:1.6;margin-bottom:10px;font-style:italic}
+.stock-bottom{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:4px}
+.stock-members{display:flex;flex-wrap:wrap;gap:2px;flex:1}
+.member-tag{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.55);font-size:9px;padding:2px 6px;border-radius:2px;display:inline-block;white-space:nowrap}
+.verdict-badge{font-size:7px;letter-spacing:1.5px;padding:2px 6px;border-radius:2px;font-weight:700;white-space:nowrap;flex-shrink:0}
 .vCERTAIN{background:rgba(212,43,43,0.2);color:#ff8080;border:1px solid rgba(212,43,43,0.4)}
 .vSTRONG{background:rgba(255,215,0,0.15);color:#FFD700;border:1px solid rgba(255,215,0,0.35)}
 .vCONVICTION{background:rgba(0,166,81,0.15);color:#4ade80;border:1px solid rgba(0,166,81,0.35)}
 .vSPECULATIVE{background:rgba(99,102,241,0.15);color:#a78bfa;border:1px solid rgba(99,102,241,0.35)}
-.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.bar-track{flex:1;height:8px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden}
+.bar-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.bar-track{flex:1;height:7px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden}
 .bar-fill{height:100%;border-radius:4px}
 .bar-amount{font-size:10px;color:rgba(255,255,255,0.4);width:34px;text-align:right;flex-shrink:0}
-.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px}
-.legend-item{display:flex;align-items:center;gap:6px;font-size:10px;color:rgba(255,255,255,0.4)}
-.legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
-.countdown-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:64px;letter-spacing:2px;background:linear-gradient(135deg,#D42B2B,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:9px;color:rgba(255,255,255,0.4)}
+.legend-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.countdown-num{font-family:'Bebas Neue',Impact,sans-serif;font-size:60px;letter-spacing:2px;background:linear-gradient(135deg,#D42B2B,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
 .countdown-label{font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:3px;margin-top:4px}
 .report-text{color:rgba(255,255,255,0.6);font-size:12px;line-height:1.9}
 .report-text p{margin-bottom:14px}
-.theme-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;padding:10px 12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px}
-.theme-emoji{font-size:20px;flex-shrink:0}
-.theme-info{flex:1}
-.theme-name{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;color:#fff}
-.theme-count{font-size:9px;color:rgba(255,255,255,0.35);margin-top:2px;letter-spacing:0.5px}
-.theme-bar-wrap{width:70px;height:5px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;margin-top:5px}
-.theme-bar{height:100%;border-radius:3px;background:var(--red)}
-.footer{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:500px;background:rgba(6,6,9,0.98);border-top:1px solid rgba(255,255,255,0.06);padding:8px 18px;display:flex;justify-content:space-between;align-items:center;z-index:99}
+.footer{position:fixed;bottom:0;left:0;right:0;background:rgba(6,6,9,0.98);border-top:1px solid rgba(255,255,255,0.06);padding:8px 18px;display:flex;justify-content:space-between;align-items:center;z-index:99}
 .footer-left{font-size:8px;letter-spacing:1px;color:rgba(255,255,255,0.2)}
 .footer-right{font-size:11px;color:rgba(212,43,43,0.6);letter-spacing:1px}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,166,81,0.6)}50%{opacity:0.7;box-shadow:0 0 0 5px rgba(0,166,81,0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
 </style>
 </head>
-<body style="background:#060609">
+<body>
 <div class="app">
-
   <div class="header">
     <div class="header-top">
       <div>
@@ -107,10 +105,10 @@ button{cursor:pointer;font-family:'Space Mono',ui-monospace,monospace;border:non
       </div>
     </div>
     <div class="nav">
-      <button class="nav-btn active" onclick="showPage('about')"><div class="nav-icon">🏴󠁧󠁢󠁷󠁬󠁳󠁿</div>CLWB</button>
-      <button class="nav-btn" onclick="showPage('portfolio')"><div class="nav-icon">📈</div>STOCIAU</button>
-      <button class="nav-btn" onclick="showPage('performance')"><div class="nav-icon">📊</div>GRAFF</button>
-      <button class="nav-btn" onclick="showPage('report')"><div class="nav-icon">📋</div>ADRODD</button>
+      <button class="nav-btn active" onclick="showPage('about')"><span class="nav-icon">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>CLWB</button>
+      <button class="nav-btn" onclick="showPage('portfolio')"><span class="nav-icon">📈</span>STOCIAU</button>
+      <button class="nav-btn" onclick="showPage('performance')"><span class="nav-icon">📊</span>GRAFF</button>
+      <button class="nav-btn" onclick="showPage('report')"><span class="nav-icon">📋</span>ADRODD</button>
     </div>
   </div>
 
@@ -132,50 +130,43 @@ button{cursor:pointer;font-family:'Space Mono',ui-monospace,monospace;border:non
         Christmas Day 2026. 🐉
       </div>
     </div>
-
-```
-<div class="card">
-  <div class="card-label">Y STORI — THE STORY</div>
-  <div style="color:rgba(255,255,255,0.65);font-size:12px;line-height:1.85">
-    A WhatsApp thread. A geopolitical crisis. A shared belief that collective intelligence beats guessing alone.<br><br>
-    We asked 3 questions. 13 people answered. An AI cross-referenced every instinct against global market data, capital flows, geopolitical risk calendars and forward earnings — and built a portfolio weighted by conviction.<br><br>
-    No fund manager. No suits. Just a group of friends taking a punt on the world.
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-label">Y RHEOLAU — THE RULES</div>
-  <div class="rule-row"><span class="rule-emoji">💷</span><div><div class="rule-title">£100 per member</div><div class="rule-desc">13 members = £1,300 total pot</div></div></div>
-  <div class="rule-row"><span class="rule-emoji">📈</span><div><div class="rule-title">10 stocks</div><div class="rule-desc">Weighted by conviction — not split equally</div></div></div>
-  <div class="rule-row"><span class="rule-emoji">🗓️</span><div><div class="rule-title">Buy in March 2026</div><div class="rule-desc">Sell Christmas Day 2026 — no exceptions</div></div></div>
-  <div class="rule-row"><span class="rule-emoji">🏦</span><div><div class="rule-title">Platform: Interactive Investor</div><div class="rule-desc">ii.co.uk — account held by Ben Scholes</div></div></div>
-  <div class="rule-row" style="margin-bottom:0"><span class="rule-emoji">🚫</span><div><div class="rule-title">No selling before Dec 25</div><div class="rule-desc">Hold your nerve. That is the game.</div></div></div>
-</div>
-
-<div class="card">
-  <div class="card-label">Y THEMAU — THE THEMES</div>
-  <div id="themes-list"></div>
-</div>
-
-<div class="card">
-  <div class="card-label">YR AELODAU — THE MEMBERS</div>
-  <div class="members-grid" id="members-grid"></div>
-</div>
-```
-
+    <div class="card">
+      <div class="card-label">Y STORI — THE STORY</div>
+      <div style="color:rgba(255,255,255,0.65);font-size:12px;line-height:1.85">
+        A WhatsApp thread. A geopolitical crisis. A shared belief that collective intelligence beats guessing alone.<br><br>
+        We asked 3 questions. 13 people answered. An AI cross-referenced every instinct against global market data, capital flows, geopolitical risk calendars and forward earnings — and built a portfolio weighted by conviction.<br><br>
+        No fund manager. No suits. Just a group of friends taking a punt on the world.
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-label">Y RHEOLAU — THE RULES</div>
+      <div class="rule-row"><span class="rule-emoji">💷</span><div><div class="rule-title">£100 per member</div><div class="rule-desc">13 members = £1,300 total pot</div></div></div>
+      <div class="rule-row"><span class="rule-emoji">📈</span><div><div class="rule-title">10 stocks</div><div class="rule-desc">Weighted by conviction — not split equally</div></div></div>
+      <div class="rule-row"><span class="rule-emoji">🗓️</span><div><div class="rule-title">Buy in March 2026</div><div class="rule-desc">Sell Christmas Day 2026 — no exceptions</div></div></div>
+      <div class="rule-row"><span class="rule-emoji">🏦</span><div><div class="rule-title">Platform: Interactive Investor</div><div class="rule-desc">ii.co.uk — account held by Ben Scholes</div></div></div>
+      <div class="rule-row" style="margin-bottom:0"><span class="rule-emoji">🚫</span><div><div class="rule-title">No selling before Dec 25</div><div class="rule-desc">Hold your nerve. That is the game.</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-label">Y THEMAU — THE THEMES</div>
+      <div id="themes-list"></div>
+    </div>
+    <div class="card">
+      <div class="card-label">YR AELODAU — THE MEMBERS</div>
+      <div class="members-grid" id="members-grid"></div>
+    </div>
   </div>
 
   <!-- PORTFOLIO -->
 
   <div class="page" id="page-portfolio">
-    <div class="card" style="padding:16px 18px">
+    <div class="card" style="padding:14px 16px">
       <div class="pot-grid">
         <div><div class="pot-label">POT</div><div class="pot-value" style="color:rgba(255,255,255,0.5)">£1,300</div></div>
         <div><div class="pot-label">VALUE</div><div class="pot-value" style="color:#4ade80">£1,300</div></div>
         <div><div class="pot-label">RETURN</div><div class="pot-value" style="color:#4ade80">0.0%</div></div>
       </div>
     </div>
-    <div class="funded-notice">✅ WEDI EI ARIANNU — Fully funded. £1,300 collected from 13 members. Stock picks incoming. 🐉</div>
+    <div class="funded-notice">✅ WEDI EI ARIANNU — Fully funded. £1,300 from 13 members. Stock picks incoming. 🐉</div>
     <div class="filter-label">HIDLO — FILTER BY MEMBER</div>
     <div class="filter-wrap" id="filter-wrap"></div>
     <div class="stock-list" id="stock-list"></div>
@@ -184,12 +175,12 @@ button{cursor:pointer;font-family:'Space Mono',ui-monospace,monospace;border:non
   <!-- PERFORMANCE -->
 
   <div class="page" id="page-performance">
-    <div style="background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:4px;padding:12px 16px;margin-bottom:14px;font-size:11px;color:rgba(255,215,0,0.75);line-height:1.7">
-      ⏳ STOCIAU YN DOD — Stock picks incoming. Performance tracking begins once purchased.
+    <div style="background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:4px;padding:12px 14px;margin-bottom:12px;font-size:11px;color:rgba(255,215,0,0.75);line-height:1.7">
+      ⏳ STOCIAU YN DOD — Stock picks incoming. Performance tracking starts once purchased.
     </div>
     <div class="card">
       <div class="card-label">GWERTH Y PORTFFOLIO — PORTFOLIO VALUE 2026</div>
-      <svg id="line-svg" viewBox="0 0 460 140" style="width:100%;height:160px" preserveAspectRatio="none"></svg>
+      <svg id="line-svg" viewBox="0 0 460 140" style="width:100%;height:150px;display:block" preserveAspectRatio="none"></svg>
       <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,0.3);margin-top:6px">
         <span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
       </div>
@@ -215,7 +206,7 @@ button{cursor:pointer;font-family:'Space Mono',ui-monospace,monospace;border:non
         <polygon points="0,180 60,90 170,130 290,55 410,100 530,65 650,110 800,75 800,180" fill="#D42B2B" opacity="0.6"/>
       </svg>
       <div class="card-label" style="color:rgba(255,215,0,0.7)">ADRODDIAD MISOL — MONTHLY REPORT</div>
-      <div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:36px;letter-spacing:2px" id="report-month"></div>
+      <div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:34px;letter-spacing:2px" id="report-month"></div>
       <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:4px" id="report-days"></div>
     </div>
     <div class="card">
@@ -223,10 +214,10 @@ button{cursor:pointer;font-family:'Space Mono',ui-monospace,monospace;border:non
       <div class="report-text">
         <p><span style="color:#FFD700">Bore da, Clwb Tech. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></p>
         <p>13 members. £1,300 in the pot. Every single payment is in.</p>
-        <p>We asked 3 questions. The themes came back clear: <span style="color:#D42B2B">Defence</span> and <span style="color:#D42B2B">Energy</span> near-unanimous. <span style="color:#FFD700">AI Infrastructure</span>, <span style="color:#FFD700">Healthcare</span> and <span style="color:#FFD700">Rare Minerals</span> as the strong secondary bets. And a handful of wild cards that could go nuclear.</p>
+        <p>We asked 3 questions. The themes came back clear: <span style="color:#D42B2B">Defence</span> and <span style="color:#D42B2B">Energy</span> near-unanimous. <span style="color:#FFD700">AI Infrastructure</span>, <span style="color:#FFD700">Healthcare</span> and <span style="color:#FFD700">Rare Minerals</span> as the strong secondary bets. A handful of wild cards that could go nuclear.</p>
         <p>One member called Space. One called Nuclear Fusion. One predicted quantum computing crashes crypto and gold hits five figures. This is not a normal investment club.</p>
         <p>Stock picks incoming. Once we pull the trigger — nothing moves until Christmas Day 2026. That is the game.</p>
-        <p style="color:rgba(255,255,255,0.3);font-size:10px;border-top:1px solid rgba(255,255,255,0.07);padding-top:14px">Monthly reports will update here once the portfolio is live. Performance, world events, bragging rights. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
+        <p style="color:rgba(255,255,255,0.3);font-size:10px;border-top:1px solid rgba(255,255,255,0.07);padding-top:14px">Monthly reports update here once live. Performance, world events, bragging rights. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
       </div>
     </div>
     <div class="card" style="text-align:center">
@@ -244,45 +235,42 @@ button{cursor:pointer;font-family:'Space Mono',ui-monospace,monospace;border:non
 
 <script>
 var MEMBERS=[
-  {id:"anna",  name:"Anna Roberts",     emoji:"👩",  sector:"Healthcare AI · Defence · Raw Materials"},
-  {id:"ben",   name:"Ben Scholes",      emoji:"💻",  sector:"AI Infrastructure · Renewables · Defence"},
-  {id:"john",  name:"John JT",          emoji:"🧔",  sector:"Energy · Defence · Utilities"},
-  {id:"paul",  name:"Paul Langshaw",    emoji:"👨",  sector:"Defence · UK Energy · Crypto · Food"},
-  {id:"ian",   name:"Ian Barwick",      emoji:"🧑",  sector:"Defence · Energy · Health Diagnostics"},
-  {id:"elliot",name:"Elliot",           emoji:"👦",  sector:"Defence · Energy · Transport"},
-  {id:"nickd", name:"Nick Dryden",      emoji:"🔐",  sector:"AI Infra · Strategic Resources · Healthcare"},
-  {id:"aled",  name:"Aled Evans",       emoji:"🏴",  sector:"Hydrocarbons · Defence · Air Freight"},
-  {id:"nickp", name:"Nick Parker",      emoji:"⛏️",  sector:"Mining · Rare Minerals"},
-  {id:"ed",    name:"Ed",               emoji:"😎",  sector:"Backs the collective"},
-  {id:"steve", name:"Steven Smith",     emoji:"🪙",  sector:"XRP · HBAR · Crypto Regulation"},
-  {id:"cris",  name:"Cristiano Pelago", emoji:"🌐",  sector:"Comms · Nuclear Fusion · Multi-Agent AI · Gold"},
-  {id:"huw",   name:"Huw Bishop",       emoji:"🚀",  sector:"Defence · Space · AI · Avoid UK domestic"}
+  {id:"anna",  name:"Anna Roberts",     emoji:"👩", sector:"Healthcare AI · Defence · Raw Materials"},
+  {id:"ben",   name:"Ben Scholes",      emoji:"💻", sector:"AI Infrastructure · Renewables · Defence"},
+  {id:"john",  name:"John JT",          emoji:"🧔", sector:"Energy · Defence · Utilities"},
+  {id:"paul",  name:"Paul Langshaw",    emoji:"👨", sector:"Defence · UK Energy · Crypto · Food"},
+  {id:"ian",   name:"Ian Barwick",      emoji:"🧑", sector:"Defence · Energy · Health Diagnostics"},
+  {id:"elliot",name:"Elliot",           emoji:"👦", sector:"Defence · Energy · Transport"},
+  {id:"nickd", name:"Nick Dryden",      emoji:"🔐", sector:"AI Infra · Strategic Resources · Healthcare"},
+  {id:"aled",  name:"Aled Evans",       emoji:"🏴", sector:"Hydrocarbons · Defence · Air Freight"},
+  {id:"nickp", name:"Nick Parker",      emoji:"⛏", sector:"Mining · Rare Minerals"},
+  {id:"ed",    name:"Ed",               emoji:"😎", sector:"Backs the collective"},
+  {id:"steve", name:"Steven Smith",     emoji:"🪙", sector:"XRP · HBAR · Crypto Regulation"},
+  {id:"cris",  name:"Cristiano Pelago", emoji:"🌐", sector:"Comms · Nuclear Fusion · Multi-Agent AI · Gold"},
+  {id:"huw",   name:"Huw Bishop",       emoji:"🛰", sector:"Defence · Space · AI · Global (ex-UK)"}
 ];
-
 var VC={CERTAIN:"#D42B2B",STRONG:"#FFD700",CONVICTION:"#00A651",SPECULATIVE:"#6366f1"};
-
 var STOCKS=[
-  {id:1, ticker:"TBC",company:"Defence Banker #1",      allocation:150,verdict:"CERTAIN",    emoji:"🛡",members:["anna","ben","john","paul","ian","elliot","aled","huw"],   influence:"8 of 13 members called defence. The world is rearming — the most unanimous pick in Clwb history."},
-  {id:2, ticker:"TBC",company:"Energy / Oil",           allocation:150,verdict:"CERTAIN",    emoji:"⚡",members:["john","paul","ian","elliot","aled","ben","nickp"],        influence:"Oil production shifting to Americas and Canada. Energy security is the geopolitical story of this decade."},
-  {id:3, ticker:"TBC",company:"AI Infrastructure",      allocation:120,verdict:"STRONG",     emoji:"🤖",members:["ben","nickd","huw","cris"],                              influence:"Not buying chips — buying what chips need. Power, networking, data centres. Four minds, same conclusion."},
-  {id:4, ticker:"TBC",company:"Healthcare Diagnostics", allocation:120,verdict:"STRONG",     emoji:"🏥",members:["anna","ian","nickd"],                                    influence:"Anna, Ian and Nick D independently called it. AI meeting precision medicine — three minds, same conclusion."},
-  {id:5, ticker:"TBC",company:"Rare Minerals & Mining", allocation:120,verdict:"STRONG",     emoji:"🪨",members:["anna","nickd","nickp"],                                  influence:"Copper, lithium, rare earths. The oil of the AI age. Anna and both Nicks converged — hard to ignore."},
-  {id:6, ticker:"TBC",company:"Air Freight / Transport",allocation:100,verdict:"CONVICTION", emoji:"✈",members:["elliot","aled"],                                         influence:"Elliot and Aled both backed it. Global trade reroutes in volatile times — air freight wins either way."},
-  {id:7, ticker:"TBC",company:"Defence Pick #2",        allocation:100,verdict:"CONVICTION", emoji:"🛡",members:["anna","ben","john","paul","ian","elliot","aled","huw"],   influence:"Defence too strong for one stock. European rearmament is a multi-year spend cycle just getting started."},
-  {id:8, ticker:"TBC",company:"Space & Comms",          allocation:80, verdict:"SPECULATIVE",emoji:"🛰",members:["huw","cris"],                                            influence:"Huw's solo space call meets Cristiano's phased array thesis. Two minds circling the same orbit from different angles."},
-  {id:9, ticker:"TBC",company:"Crypto Proxy",           allocation:80, verdict:"SPECULATIVE",emoji:"🪙",members:["paul","steve"],                                          influence:"Paul backed MicroStrategy, Steve called XRP on the Clarity Act. High risk, high reward — could go nuclear."},
-  {id:10,ticker:"TBC",company:"AI Wild Card / Gold",    allocation:80, verdict:"SPECULATIVE",emoji:"🥇",members:["ben","nickd","steve","cris"],                            influence:"Multi-agent AI, nuclear fusion, gold. Nick D and Cristiano both called gold independently. The dark horse of the portfolio."}
+  {id:1, ticker:"TBC",company:"Defence Banker #1",      allocation:150,verdict:"CERTAIN",    emoji:"🛡",members:["anna","ben","john","paul","ian","elliot","aled","huw"],influence:"8 of 13 members called defence. The world is rearming — the most unanimous pick in Clwb history."},
+  {id:2, ticker:"TBC",company:"Energy / Oil",           allocation:150,verdict:"CERTAIN",    emoji:"⚡",members:["john","paul","ian","elliot","aled","ben","nickp"],      influence:"Oil production shifting to Americas and Canada. Energy security is the geopolitical story of this decade."},
+  {id:3, ticker:"TBC",company:"AI Infrastructure",      allocation:120,verdict:"STRONG",     emoji:"🤖",members:["ben","nickd","huw","cris"],                            influence:"Not buying chips — buying what chips need. Power, networking, data centres. Four minds, same conclusion."},
+  {id:4, ticker:"TBC",company:"Healthcare Diagnostics", allocation:120,verdict:"STRONG",     emoji:"🏥",members:["anna","ian","nickd"],                                  influence:"Anna, Ian and Nick D independently called it. AI meeting precision medicine — three minds, same conclusion."},
+  {id:5, ticker:"TBC",company:"Rare Minerals & Mining", allocation:120,verdict:"STRONG",     emoji:"🪨",members:["anna","nickd","nickp"],                                influence:"Copper, lithium, rare earths. The oil of the AI age. Anna and both Nicks converged — hard to ignore."},
+  {id:6, ticker:"TBC",company:"Air Freight / Transport",allocation:100,verdict:"CONVICTION", emoji:"✈",members:["elliot","aled"],                                       influence:"Elliot and Aled both backed it. Global trade reroutes in volatile times — air freight wins either way."},
+  {id:7, ticker:"TBC",company:"Defence Pick #2",        allocation:100,verdict:"CONVICTION", emoji:"🛡",members:["anna","ben","john","paul","ian","elliot","aled","huw"], influence:"Defence too strong for one stock. European rearmament is a multi-year spend cycle just getting started."},
+  {id:8, ticker:"TBC",company:"Space & Comms",          allocation:80, verdict:"SPECULATIVE",emoji:"🛰",members:["huw","cris"],                                          influence:"Huw's solo space call meets Cristiano's phased array thesis. Two minds, same orbit."},
+  {id:9, ticker:"TBC",company:"Crypto Proxy",           allocation:80, verdict:"SPECULATIVE",emoji:"🪙",members:["paul","steve"],                                        influence:"Paul backed MicroStrategy, Steve called XRP on the Clarity Act. High risk, high reward — could go nuclear."},
+  {id:10,ticker:"TBC",company:"AI Wild Card / Gold",    allocation:80, verdict:"SPECULATIVE",emoji:"🥇",members:["ben","nickd","steve","cris"],                          influence:"Multi-agent AI meets gold. Nick D and Cristiano both called gold independently. The dark horse of the portfolio."}
 ];
-
 var THEMES=[
-  {emoji:"🛡️",name:"Defence",          count:8, pct:62},
-  {emoji:"⚡",name:"Energy / Oil",      count:7, pct:54},
-  {emoji:"🤖",name:"AI Infrastructure", count:4, pct:31},
-  {emoji:"🏥",name:"Healthcare / MedTech",count:3,pct:23},
-  {emoji:"🪨",name:"Rare Minerals",     count:3, pct:23},
-  {emoji:"🥇",name:"Gold",              count:2, pct:15},
-  {emoji:"🛰️",name:"Space & Comms",    count:2, pct:15},
-  {emoji:"🪙",name:"Crypto",            count:2, pct:15},
+  {emoji:"🛡",name:"Defence",           count:8,pct:62},
+  {emoji:"⚡",name:"Energy / Oil",      count:7,pct:54},
+  {emoji:"🤖",name:"AI Infrastructure", count:4,pct:31},
+  {emoji:"🏥",name:"Healthcare",        count:3,pct:23},
+  {emoji:"🪨",name:"Rare Minerals",     count:3,pct:23},
+  {emoji:"🥇",name:"Gold",              count:2,pct:15},
+  {emoji:"🛰",name:"Space & Comms",     count:2,pct:15},
+  {emoji:"🪙",name:"Crypto",            count:2,pct:15}
 ];
 
 function showPage(id){
@@ -295,28 +283,26 @@ function showPage(id){
   window.scrollTo(0,0);
 }
 
-// Themes
 document.getElementById('themes-list').innerHTML=THEMES.map(function(t){
   return '<div class="theme-row">'+
-    '<span class="theme-emoji">'+t.emoji+'</span>'+
-    '<div class="theme-info">'+
-      '<div class="theme-name">'+t.name+'</div>'+
-      '<div class="theme-count">'+t.count+' of 13 members · '+t.pct+'%</div>'+
+    '<span style="font-size:18px;flex-shrink:0">'+t.emoji+'</span>'+
+    '<div style="flex:1;min-width:0">'+
+      '<div style="font-family:\'Rajdhani\',sans-serif;font-weight:700;font-size:13px;color:#fff">'+t.name+'</div>'+
+      '<div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px">'+t.count+' of 13 members</div>'+
       '<div class="theme-bar-wrap"><div class="theme-bar" style="width:'+t.pct+'%"></div></div>'+
     '</div>'+
+    '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;color:rgba(255,255,255,0.25);flex-shrink:0">'+t.pct+'%</div>'+
   '</div>';
 }).join('');
 
-// Members
 document.getElementById('members-grid').innerHTML=MEMBERS.map(function(m){
   return '<div class="member-card">'+
-    '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">'+
-    '<span style="font-size:17px">'+m.emoji+'</span>'+
+    '<div style="display:flex;align-items:center;gap:7px;margin-bottom:3px">'+
+    '<span style="font-size:16px">'+m.emoji+'</span>'+
     '<span class="member-name">'+m.name+'</span></div>'+
     '<div class="member-sector">'+m.sector+'</div></div>';
 }).join('');
 
-// Filters
 var activeFilter=null;
 document.getElementById('filter-wrap').innerHTML=
   '<button class="filter-btn active" onclick="setFilter(null,this)">ALL</button>'+
@@ -340,12 +326,12 @@ function buildStocks(){
     }).join('');
     return '<div class="stock-card" style="border-left-color:'+VC[s.verdict]+'">'+
       '<div class="stock-top">'+
-        '<div class="stock-left"><span style="font-size:22px">'+s.emoji+'</span>'+
-          '<div><div class="stock-ticker">'+s.ticker+'</div>'+
+        '<div class="stock-left"><span style="font-size:20px;flex-shrink:0">'+s.emoji+'</span>'+
+          '<div style="min-width:0"><div class="stock-ticker">'+s.ticker+'</div>'+
           '<div class="stock-company">'+s.company+'</div></div></div>'+
         '<div class="stock-right">'+
           '<div class="stock-pending">PENDING</div>'+
-          '<div class="stock-alloc">£'+s.allocation+' allocated</div></div></div>'+
+          '<div class="stock-alloc">£'+s.allocation+'</div></div></div>'+
       '<div class="stock-influence">"'+s.influence+'"</div>'+
       '<div class="stock-bottom"><div class="stock-members">'+tags+'</div>'+
         '<span class="verdict-badge v'+s.verdict+'">'+s.verdict+'</span></div></div>';
@@ -353,32 +339,28 @@ function buildStocks(){
 }
 buildStocks();
 
-// Bar chart
 document.getElementById('bar-chart').innerHTML=STOCKS.map(function(s){
   return '<div class="bar-row">'+
-    '<span style="font-size:15px;width:22px;text-align:center;flex-shrink:0">'+s.emoji+'</span>'+
+    '<span style="font-size:14px;width:20px;text-align:center;flex-shrink:0">'+s.emoji+'</span>'+
     '<div class="bar-track"><div class="bar-fill" style="width:'+(s.allocation/150*100)+'%;background:'+VC[s.verdict]+'"></div></div>'+
     '<span class="bar-amount">£'+s.allocation+'</span></div>';
 }).join('');
 
-// Line chart
 (function(){
   var data=[1300,1300,1300,1300,1300,1300,1300,1300,1300,1300];
   var w=460,h=140,pad=10,minV=900,maxV=1800;
   var pts=data.map(function(v,i){
     return (pad+(i/(data.length-1))*(w-pad*2))+','+(h-pad-((v-minV)/(maxV-minV))*(h-pad*2));
   });
-  var areaD='M '+pad+','+h+' L '+pts.join(' L ')+' L '+(w-pad)+','+h+' Z';
   document.getElementById('line-svg').innerHTML=
     '<defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1">'+
     '<stop offset="0%" stop-color="#D42B2B" stop-opacity="0.4"/>'+
     '<stop offset="100%" stop-color="#D42B2B" stop-opacity="0"/></linearGradient></defs>'+
-    '<path d="'+areaD+'" fill="url(#lg)"/>'+
+    '<path d="M '+pad+','+h+' L '+pts.join(' L ')+' L '+(w-pad)+','+h+' Z" fill="url(#lg)"/>'+
     '<path d="M '+pts.join(' L ')+'" fill="none" stroke="#D42B2B" stroke-width="2"/>'+
     pts.map(function(p){var c=p.split(',');return '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="3" fill="#D42B2B"/>';}).join('');
 })();
 
-// Report
 (function(){
   var now=new Date();
   document.getElementById('report-month').textContent=now.toLocaleString('en-GB',{month:'long'}).toUpperCase()+' '+now.getFullYear();
