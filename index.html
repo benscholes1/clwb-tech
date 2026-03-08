@@ -6,250 +6,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Clwb Tech 2026</title>
+<meta property="og:title" content="Clwb Tech — Investor Clwb 2026"/>
+<meta property="og:description" content="14 members. £1,400. 10 stocks. We win together or lose together. Christmas 2026."/>
+<meta property="og:url" content="https://clwbtech.netlify.app"/>
+<meta property="og:image" content="https://clwbtech.netlify.app/preview.png"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%23060609'/><text y='.9em' font-size='80' x='10'>🐉</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html, body {
-  background: #060609;
-  color: #fff;
-  font-family: 'Space Mono', monospace;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-body { -webkit-text-size-adjust: 100%; }
-
-.wrap {
-width: 100%;
-max-width: 480px;
-margin: 0 auto;
-background: #060609;
-min-height: 100vh;
-}
-
-/* HEADER */
-.hdr {
-position: sticky;
-top: 0;
-z-index: 50;
-background: #060609;
-border-bottom: 1px solid rgba(255,255,255,0.08);
-width: 100%;
-}
-.hdr-top {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 12px 16px 8px;
-}
-.logo-big { font-family: ‘Bebas Neue’, sans-serif; font-size: 24px; letter-spacing: 2px; color: #fff; }
-.logo-sm { font-size: 8px; letter-spacing: 2px; color: rgba(255,215,0,0.7); display: block; }
-.dot { width: 7px; height: 7px; border-radius: 50%; background: #00A651; display: inline-block; margin-right: 5px; }
-.byw { font-size: 8px; letter-spacing: 1px; color: rgba(255,255,255,0.3); }
-
-/* NAV */
-.nav { display: flex; width: 100%; }
-.nb {
-flex: 1;
-background: none;
-border: none;
-border-bottom: 2px solid transparent;
-color: rgba(255,255,255,0.35);
-padding: 8px 2px 10px;
-font-family: ‘Space Mono’, monospace;
-font-size: 8px;
-letter-spacing: 0.5px;
-cursor: pointer;
-text-align: center;
--webkit-tap-highlight-color: transparent;
-}
-.nb.on { color: #fff; border-bottom-color: #D42B2B; }
-.ni { display: block; font-size: 14px; margin-bottom: 2px; }
-
-/* PAGES */
-.pg { display: none; padding: 14px 14px 100px; width: 100%; }
-.pg.on { display: block; }
-
-/* CARD */
-.card {
-background: rgba(255,255,255,0.03);
-border: 1px solid rgba(255,255,255,0.08);
-border-radius: 6px;
-padding: 16px;
-margin-bottom: 12px;
-width: 100%;
-}
-.lbl { font-size: 8px; letter-spacing: 3px; color: rgba(255,255,255,0.3); margin-bottom: 12px; }
-
-/* HERO */
-.hero {
-background: linear-gradient(135deg, rgba(212,43,43,0.14), rgba(0,166,81,0.06));
-border-left: 3px solid #D42B2B;
-position: relative;
-overflow: hidden;
-}
-.h1 { font-family: ‘Bebas Neue’, sans-serif; font-size: 42px; letter-spacing: 3px; line-height: 1; color: #fff; }
-.h2 { font-family: ‘Bebas Neue’, sans-serif; font-size: 12px; letter-spacing: 5px; color: #FFD700; margin-top: 4px; }
-.hline { height: 2px; background: linear-gradient(90deg, #D42B2B, rgba(255,255,255,0.3), #00A651); margin: 12px 0; border-radius: 1px; }
-.htxt { color: rgba(255,255,255,0.6); font-size: 12px; line-height: 1.8; }
-.mtn { position: absolute; bottom: 0; left: 0; width: 100%; height: 80px; opacity: 0.07; pointer-events: none; }
-
-/* RULES */
-.rr { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; }
-.re { font-size: 18px; flex-shrink: 0; }
-.rt { color: #fff; font-size: 13px; font-weight: 700; }
-.rd { color: rgba(255,255,255,0.4); font-size: 10px; margin-top: 2px; }
-
-/* THEMES */
-.trow {
-display: flex;
-align-items: center;
-gap: 10px;
-padding: 8px 10px;
-background: rgba(255,255,255,0.02);
-border: 1px solid rgba(255,255,255,0.06);
-border-radius: 4px;
-margin-bottom: 6px;
-}
-.tbar-wrap { height: 4px; background: rgba(255,255,255,0.07); border-radius: 2px; overflow: hidden; margin-top: 4px; }
-.tbar { height: 100%; background: #D42B2B; border-radius: 2px; }
-
-/* MEMBERS */
-.mgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.mc { background: rgba(0,166,81,0.06); border: 1px solid rgba(0,166,81,0.2); border-radius: 4px; padding: 8px 10px; }
-.mn { font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.85); }
-.ms { font-size: 8px; color: rgba(255,255,255,0.35); margin-top: 3px; line-height: 1.4; }
-
-/* POT */
-.pgrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; text-align: center; }
-.pl { font-size: 8px; letter-spacing: 2px; color: rgba(255,255,255,0.3); }
-.pv { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; letter-spacing: 1px; line-height: 1.1; }
-
-/* NOTICES */
-.notice-green {
-background: rgba(0,166,81,0.08);
-border: 1px solid rgba(0,166,81,0.3);
-border-radius: 4px;
-padding: 12px 14px;
-margin-bottom: 12px;
-font-size: 11px;
-color: rgba(0,166,81,0.9);
-line-height: 1.7;
-}
-.notice-gold {
-background: rgba(255,215,0,0.06);
-border: 1px solid rgba(255,215,0,0.2);
-border-radius: 4px;
-padding: 12px 14px;
-margin-bottom: 12px;
-font-size: 11px;
-color: rgba(255,215,0,0.8);
-line-height: 1.7;
-}
-
-/* FILTERS */
-.flbl { font-size: 8px; letter-spacing: 2px; color: rgba(255,255,255,0.3); margin-bottom: 8px; }
-.fwrap { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
-.fb {
-font-size: 9px; padding: 4px 7px; border-radius: 2px;
-border: 1px solid rgba(255,255,255,0.1);
-color: rgba(255,255,255,0.4);
-background: rgba(255,255,255,0.04);
-font-family: ‘Space Mono’, monospace;
-cursor: pointer;
--webkit-tap-highlight-color: transparent;
-}
-.fb.on { background: rgba(212,43,43,0.2); border-color: rgba(212,43,43,0.5); color: #fff; }
-
-/* STOCKS */
-.slist { display: flex; flex-direction: column; gap: 10px; }
-.sc {
-background: rgba(255,255,255,0.025);
-border: 1px solid rgba(255,255,255,0.07);
-border-radius: 6px;
-padding: 14px;
-border-left: 3px solid #D42B2B;
-width: 100%;
-}
-.stop { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
-.sleft { display: flex; align-items: center; gap: 8px; }
-.sticker { font-family: ‘Bebas Neue’, sans-serif; font-size: 20px; letter-spacing: 1px; color: #fff; line-height: 1; }
-.sco { font-size: 9px; color: rgba(255,255,255,0.4); }
-.sright { text-align: right; flex-shrink: 0; margin-left: 8px; }
-.spend { font-size: 9px; color: rgba(255,215,0,0.6); letter-spacing: 1px; }
-.salloc { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 2px; }
-.sinf { font-size: 10px; color: rgba(255,255,255,0.4); line-height: 1.6; margin: 8px 0; font-style: italic; }
-.sbot { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 4px; }
-.smems { display: flex; flex-wrap: wrap; gap: 3px; flex: 1; }
-.mtag {
-background: rgba(255,255,255,0.05);
-border: 1px solid rgba(255,255,255,0.1);
-color: rgba(255,255,255,0.5);
-font-size: 9px; padding: 2px 6px; border-radius: 2px;
-white-space: nowrap;
-}
-.vb { font-size: 7px; letter-spacing: 1.5px; padding: 2px 6px; border-radius: 2px; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
-.vCERTAIN    { background: rgba(212,43,43,0.2);   color: #ff8080; border: 1px solid rgba(212,43,43,0.4); }
-.vSTRONG     { background: rgba(255,215,0,0.12);  color: #FFD700; border: 1px solid rgba(255,215,0,0.3); }
-.vCONVICTION { background: rgba(0,166,81,0.12);   color: #4ade80; border: 1px solid rgba(0,166,81,0.3); }
-.vSPECULATIVE{ background: rgba(99,102,241,0.12); color: #a78bfa; border: 1px solid rgba(99,102,241,0.3); }
-
-/* BARS */
-.brow { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
-.btrack { flex: 1; height: 7px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
-.bfill { height: 100%; border-radius: 4px; }
-.bamt { font-size: 10px; color: rgba(255,255,255,0.4); width: 32px; text-align: right; flex-shrink: 0; }
-
-/* LEGEND */
-.leg { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
-.li { display: flex; align-items: center; gap: 5px; font-size: 9px; color: rgba(255,255,255,0.4); }
-.ld { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
-
-/* COUNTDOWN */
-.cnum {
-font-family: ‘Bebas Neue’, sans-serif;
-font-size: 60px; letter-spacing: 2px; line-height: 1;
-background: linear-gradient(135deg, #D42B2B, #FFD700);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-}
-.clbl { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 3px; margin-top: 4px; }
-
-/* REPORT */
-.rtxt { color: rgba(255,255,255,0.6); font-size: 12px; line-height: 1.9; }
-.rtxt p { margin-bottom: 12px; }
-
-/* FOOTER */
-.ftr {
-position: fixed;
-bottom: 0; left: 0; right: 0;
-background: rgba(6,6,9,0.98);
-border-top: 1px solid rgba(255,255,255,0.06);
-padding: 8px 16px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-z-index: 50;
-}
-.fl { font-size: 8px; letter-spacing: 1px; color: rgba(255,255,255,0.2); }
-.fr { font-size: 10px; color: rgba(212,43,43,0.6); }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden;background:#060609}
+body{background:#060609;color:#fff;font-family:'Space Mono',monospace;min-height:100vh;overflow-x:hidden;-webkit-text-size-adjust:100%}
+button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:none;-webkit-tap-highlight-color:transparent}
+:root{--red:#D42B2B;--gold:#FFD700;--green:#00A651;--border:rgba(255,255,255,0.08)}
+.wrap{width:100%;max-width:480px;margin:0 auto;min-height:100vh;background:#060609;overflow-x:hidden}
+.hdr{position:sticky;top:0;z-index:50;background:#060609;border-bottom:1px solid var(--border);width:100%}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px 8px}
+.logo-big{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;color:#fff}
+.logo-sm{font-size:8px;letter-spacing:2px;color:rgba(255,215,0,0.7);display:block}
+.dot{width:7px;height:7px;border-radius:50%;background:#00A651;display:inline-block;margin-right:5px;animation:pulse 2s infinite}
+.byw{font-size:8px;letter-spacing:1px;color:rgba(255,255,255,0.3)}
+.nav{display:flex;width:100%}
+.nb{flex:1;background:none;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,0.35);padding:8px 2px 10px;font-family:'Space Mono',monospace;font-size:8px;letter-spacing:0.5px;cursor:pointer;text-align:center;-webkit-tap-highlight-color:transparent;transition:color 0.2s,border-color 0.2s}
+.nb.on{color:#fff;border-bottom-color:var(--red)}
+.ni{display:block;font-size:14px;margin-bottom:2px}
+.pg{display:none;padding:14px 14px 100px;width:100%}
+.pg.on{display:block}
+.card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:16px;margin-bottom:12px;width:100%}
+.lbl{font-size:8px;letter-spacing:3px;color:rgba(255,255,255,0.3);margin-bottom:12px}
+.hero{background:linear-gradient(135deg,rgba(212,43,43,0.14),rgba(0,166,81,0.06));border-left:3px solid var(--red);position:relative;overflow:hidden}
+.h1{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:3px;line-height:1;color:#fff}
+.h2{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:5px;color:var(--gold);margin-top:4px}
+.hline{height:2px;background:linear-gradient(90deg,var(--red),rgba(255,255,255,0.3),var(--green));margin:12px 0;border-radius:1px}
+.htxt{color:rgba(255,255,255,0.6);font-size:12px;line-height:1.8}
+.mtn{position:absolute;bottom:0;left:0;width:100%;height:80px;opacity:0.07;pointer-events:none}
+.rr{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start}
+.re{font-size:18px;flex-shrink:0}
+.rt{color:#fff;font-size:13px;font-weight:700}
+.rd{color:rgba(255,255,255,0.4);font-size:10px;margin-top:2px}
+.trow{display:flex;align-items:center;gap:10px;padding:8px 10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:4px;margin-bottom:6px}
+.tbar-wrap{height:4px;background:rgba(255,255,255,0.07);border-radius:2px;overflow:hidden;margin-top:4px}
+.tbar{height:100%;background:var(--red);border-radius:2px}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.mc{background:rgba(0,166,81,0.06);border:1px solid rgba(0,166,81,0.2);border-radius:4px;padding:8px 10px}
+.mn{font-size:11px;font-weight:700;color:rgba(255,255,255,0.85)}
+.ms{font-size:8px;color:rgba(255,255,255,0.35);margin-top:3px;line-height:1.4}
+.pgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center}
+.pl{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.3)}
+.pv{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;line-height:1.1}
+.notice-green{background:rgba(0,166,81,0.08);border:1px solid rgba(0,166,81,0.3);border-radius:4px;padding:12px 14px;margin-bottom:12px;font-size:11px;color:rgba(0,166,81,0.9);line-height:1.7}
+.notice-gold{background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:4px;padding:12px 14px;margin-bottom:12px;font-size:11px;color:rgba(255,215,0,0.8);line-height:1.7}
+.flbl{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,0.3);margin-bottom:8px}
+.fwrap{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
+.fb{font-size:9px;padding:4px 7px;border-radius:2px;border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.04);font-family:'Space Mono',monospace;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.fb.on{background:rgba(212,43,43,0.2);border-color:rgba(212,43,43,0.5);color:#fff}
+.slist{display:flex;flex-direction:column;gap:10px}
+.sc{background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:6px;padding:14px;border-left:3px solid var(--red);width:100%}
+.stop{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.sleft{display:flex;align-items:center;gap:8px}
+.sticker{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:#fff;line-height:1}
+.sco{font-size:9px;color:rgba(255,255,255,0.4)}
+.sright{text-align:right;flex-shrink:0;margin-left:8px}
+.spend{font-size:9px;color:rgba(255,215,0,0.6);letter-spacing:1px;animation:blink 2s infinite}
+.salloc{font-size:10px;color:rgba(255,255,255,0.3);margin-top:2px}
+.sinf{font-size:10px;color:rgba(255,255,255,0.4);line-height:1.6;margin:8px 0;font-style:italic}
+.sbot{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:4px}
+.smems{display:flex;flex-wrap:wrap;gap:3px;flex:1}
+.mtag{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);font-size:9px;padding:2px 6px;border-radius:2px;white-space:nowrap}
+.vb{font-size:7px;letter-spacing:1.5px;padding:2px 6px;border-radius:2px;font-weight:700;white-space:nowrap;flex-shrink:0}
+.vCERTAIN{background:rgba(212,43,43,0.2);color:#ff8080;border:1px solid rgba(212,43,43,0.4)}
+.vSTRONG{background:rgba(255,215,0,0.12);color:#FFD700;border:1px solid rgba(255,215,0,0.3)}
+.vCONVICTION{background:rgba(0,166,81,0.12);color:#4ade80;border:1px solid rgba(0,166,81,0.3)}
+.vSPECULATIVE{background:rgba(99,102,241,0.12);color:#a78bfa;border:1px solid rgba(99,102,241,0.3)}
+.brow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.btrack{flex:1;height:7px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden}
+.bfill{height:100%;border-radius:4px}
+.bamt{font-size:10px;color:rgba(255,255,255,0.4);width:32px;text-align:right;flex-shrink:0}
+.leg{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.li{display:flex;align-items:center;gap:5px;font-size:9px;color:rgba(255,255,255,0.4)}
+.ld{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.cnum{font-family:'Bebas Neue',sans-serif;font-size:60px;letter-spacing:2px;line-height:1;background:linear-gradient(135deg,#D42B2B,#FFD700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.clbl{font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:3px;margin-top:4px}
+.rtxt{color:rgba(255,255,255,0.6);font-size:12px;line-height:1.9}
+.rtxt p{margin-bottom:12px}
+.ftr{position:fixed;bottom:0;left:0;right:0;background:rgba(6,6,9,0.98);border-top:1px solid rgba(255,255,255,0.06);padding:8px 16px;display:flex;justify-content:space-between;align-items:center;z-index:50}
+.fl{font-size:8px;letter-spacing:1px;color:rgba(255,255,255,0.2)}
+.fr{font-size:10px;color:rgba(212,43,43,0.6)}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,166,81,0.6)}50%{opacity:0.7;box-shadow:0 0 0 5px rgba(0,166,81,0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
 </style>
-
 </head>
 <body>
 <div class="wrap">
-
   <div class="hdr">
     <div class="hdr-top">
       <div>
         <div class="logo-big">CLWB TECH</div>
         <span class="logo-sm">INVESTOR CLWB 2026</span>
       </div>
-      <div>
-        <span class="dot"></span>
-        <span class="byw">BYW</span>
-      </div>
+      <div><span class="dot"></span><span class="byw">BYW</span></div>
     </div>
     <div class="nav">
       <button class="nb on" onclick="go('about')"><span class="ni">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>CLWB</button>
@@ -273,8 +128,8 @@ z-index: 50;
       <div class="htxt">
         Born March 2026 — right after the world changed.<br>
         Iran. Israel. Ukraine still burning. Trump back in power.<br><br>
-        <span style="color:#4ade80">13 members. £1,300. 10 stocks.</span><br>
-        Christmas Day 2026. 🐉
+        <span style="color:#4ade80">14 members. £1,400. 10 stocks.</span><br>
+        Christmas 2026. 🐉
       </div>
     </div>
 
@@ -284,28 +139,25 @@ z-index: 50;
   <div style="font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;color:#fff;line-height:1">WE WIN TOGETHER</div>
   <div style="font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;color:#fff;line-height:1">OR LOSE TOGETHER</div>
   <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(255,215,0,0.4),transparent);margin:12px 0"></div>
-  <div style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:1px;line-height:1.7">
-    13 minds. One portfolio. No competition.<br>
-    <span style="color:rgba(255,215,0,0.7)">"All for one and one for all"</span>
-  </div>
+  <div style="font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:1px;line-height:1.7">14 minds. One portfolio. No competition.<br><span style="color:rgba(255,215,0,0.7)">"All for one and one for all"</span></div>
 </div>
 
 <div class="card">
   <div class="lbl">Y STORI — THE STORY</div>
   <div style="color:rgba(255,255,255,0.65);font-size:12px;line-height:1.85">
     A WhatsApp thread. A geopolitical crisis. A shared belief that collective intelligence beats guessing alone.<br><br>
-    We asked 3 questions. 13 people answered. An AI cross-referenced every instinct against global market data, capital flows, geopolitical risk calendars and forward earnings — and built a portfolio weighted by conviction.<br><br>
+    We asked 3 questions. 14 people answered. An AI cross-referenced every instinct against global market data, capital flows, geopolitical risk calendars and forward earnings — and built a portfolio weighted by conviction.<br><br>
     No fund manager. No suits. Just a group of friends taking a punt on the world.
   </div>
 </div>
 
 <div class="card">
   <div class="lbl">Y RHEOLAU — THE RULES</div>
-  <div class="rr"><span class="re">💷</span><div><div class="rt">£100 per member</div><div class="rd">13 members = £1,300 total pot</div></div></div>
+  <div class="rr"><span class="re">💷</span><div><div class="rt">£100 per member</div><div class="rd">14 members = £1,400 total pot</div></div></div>
   <div class="rr"><span class="re">📈</span><div><div class="rt">10 stocks</div><div class="rd">Weighted by conviction — not split equally</div></div></div>
-  <div class="rr"><span class="re">🗓️</span><div><div class="rt">Buy in March 2026</div><div class="rd">Sell Christmas Day 2026 — no exceptions</div></div></div>
-  <div class="rr"><span class="re">🏦</span><div><div class="rt">Platform: Interactive Investor</div><div class="rd">ii.co.uk — account held by Ben Scholes</div></div></div>
-  <div class="rr" style="margin-bottom:0"><span class="re">🚫</span><div><div class="rt">No selling before Dec 25</div><div class="rd">Hold your nerve. That is the game.</div></div></div>
+  <div class="rr"><span class="re">🗓️</span><div><div class="rt">Buy in March 2026</div><div class="rd">Sell Christmas 2026 — no exceptions</div></div></div>
+  <div class="rr"><span class="re">🏦</span><div><div class="rt">Platform: Freetrade / Interactive Investor</div><div class="rd">Account held by Ben Scholes</div></div></div>
+  <div class="rr" style="margin-bottom:0"><span class="re">🚫</span><div><div class="rt">No selling early</div><div class="rd">Hold your nerve. That is the game.</div></div></div>
 </div>
 
 <div class="card">
@@ -326,12 +178,12 @@ z-index: 50;
   <div class="pg" id="pg-portfolio">
     <div class="card" style="padding:14px 16px">
       <div class="pgrid">
-        <div><div class="pl">POT</div><div class="pv" style="color:rgba(255,255,255,0.5)">£1,300</div></div>
-        <div><div class="pl">VALUE</div><div class="pv" style="color:#4ade80">£1,300</div></div>
+        <div><div class="pl">POT</div><div class="pv" style="color:rgba(255,255,255,0.5)">£1,400</div></div>
+        <div><div class="pl">VALUE</div><div class="pv" style="color:#4ade80">£1,400</div></div>
         <div><div class="pl">RETURN</div><div class="pv" style="color:#4ade80">0.0%</div></div>
       </div>
     </div>
-    <div class="notice-green">✅ WEDI EI ARIANNU — Fully funded. £1,300 from 13 members. Stock picks incoming. 🐉</div>
+    <div class="notice-green">✅ WEDI EI ARIANNU — Fully funded. £1,400 from 14 members. Stock picks incoming. 🐉</div>
     <div class="flbl">HIDLO — FILTER BY MEMBER</div>
     <div class="fwrap" id="filters"></div>
     <div class="slist" id="stocks"></div>
@@ -376,10 +228,10 @@ z-index: 50;
       <div class="lbl">ADRODDIAD GAN BEN — REPORT FROM BEN</div>
       <div class="rtxt">
         <p><span style="color:#FFD700">Bore da, Clwb Tech. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></p>
-        <p>13 members. £1,300 in the pot. Every single payment is in.</p>
-        <p>The themes came back clear: <span style="color:#D42B2B">Defence</span> and <span style="color:#D42B2B">Energy</span> near-unanimous. <span style="color:#FFD700">AI Infrastructure</span>, <span style="color:#FFD700">Healthcare</span> and <span style="color:#FFD700">Rare Minerals</span> as the strong secondary bets. A handful of wild cards that could go nuclear.</p>
-        <p>One member called Space. Two called Nuclear Energy. One predicted quantum computing crashes crypto and gold hits five figures. This is not a normal investment club.</p>
-        <p>Stock picks incoming. Once we pull the trigger — nothing moves until Christmas Day 2026. That is the game.</p>
+        <p>14 members. £1,400 in the pot. Every payment is in.</p>
+        <p>The themes came back clear: <span style="color:#D42B2B">Defence</span> and <span style="color:#D42B2B">Energy</span> near-unanimous. <span style="color:#FFD700">AI Infrastructure</span>, <span style="color:#FFD700">Healthcare</span> and <span style="color:#FFD700">Rare Minerals</span> strong secondary bets. A handful of wild cards that could go nuclear.</p>
+        <p>Two members called Space. Two called Nuclear. One called Gaming ecosystems. One predicted quantum computing crashes crypto and gold hits five figures. This is not a normal investment club.</p>
+        <p>Stock picks incoming. Once we pull the trigger — nothing moves until Christmas 2026. That is the game. Yr Effaith Clwb — we win together or lose together.</p>
         <p style="color:rgba(255,255,255,0.3);font-size:10px;border-top:1px solid rgba(255,255,255,0.07);padding-top:12px">Monthly reports update here once live. Performance, world events, bragging rights. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
       </div>
     </div>
@@ -391,141 +243,140 @@ z-index: 50;
   </div>
 
   <div class="ftr">
-    <div class="fl">WIN TOGETHER · LOSE TOGETHER · DEC 25</div>
+    <div class="fl">WIN TOGETHER · LOSE TOGETHER · DEC 2026</div>
     <div class="fr">🐉 YR EFFAITH CLWB</div>
   </div>
-
 </div>
+
 <script>
 var M=[
-  {id:"anna",  name:"Anna Roberts",     e:"👩", s:"Healthcare AI · Defence · Raw Materials"},
-  {id:"ben",   name:"Ben Scholes",      e:"💻", s:"AI Infrastructure · Renewables · Defence"},
-  {id:"john",  name:"John JT",          e:"🧔", s:"Energy · Defence · Utilities"},
-  {id:"paul",  name:"Paul Langshaw",    e:"👨", s:"Defence · UK Energy · Crypto · Food"},
-  {id:"ian",   name:"Ian Barwick",      e:"🧑", s:"Defence · Energy · Health Diagnostics"},
-  {id:"elliot",name:"Elliot",           e:"👦", s:"Defence · Energy · Transport"},
-  {id:"nickd", name:"Nick Dryden",      e:"🔐", s:"AI Infra · Strategic Resources · Healthcare"},
-  {id:"aled",  name:"Aled Evans",       e:"🏴", s:"Hydrocarbons · Defence · Air Freight"},
-  {id:"nickp", name:"Nick Parker",      e:"⛏", s:"Mining · Rare Minerals"},
-  {id:"ed",    name:"Ed",               e:"😎", s:"Backs the collective"},
-  {id:"steve", name:"Steven Smith",     e:"🪙", s:"XRP · HBAR · Crypto Regulation"},
-  {id:"cris",  name:"Cristiano Pelago", e:"🌐", s:"Comms · Nuclear Fusion · Multi-Agent AI · Gold"},
-  {id:"huw",   name:"Huw Bishop",       e:"🛰", s:"Defence · Space · Nuclear · Global (ex-UK)"}
+  {id:"anna",   name:"Anna Roberts",     e:"👩",  s:"Healthcare AI · Defence · Raw Materials"},
+  {id:"ben",    name:"Ben Scholes",       e:"💻",  s:"AI Infrastructure · Renewables · Defence"},
+  {id:"john",   name:"John JT",           e:"🧔",  s:"Energy · Defence · Utilities"},
+  {id:"paul",   name:"Paul Langshaw",     e:"👨",  s:"Defence · UK Energy · Crypto · Food"},
+  {id:"ian",    name:"Ian Barwick",       e:"🧑",  s:"Defence · Energy · Health Diagnostics"},
+  {id:"elliot", name:"Elliot",            e:"👦",  s:"Defence · Energy · Transport"},
+  {id:"nickd",  name:"Nick Dryden",       e:"🔐",  s:"AI Infra · Strategic Resources · Healthcare"},
+  {id:"aled",   name:"Aled Evans",        e:"🏴",  s:"Hydrocarbons · Defence · Air Freight"},
+  {id:"nickp",  name:"Nick Parker",       e:"⛏",  s:"Mining · Rare Minerals"},
+  {id:"ed",     name:"Ed",                e:"😎",  s:"Backs the collective"},
+  {id:"steve",  name:"Steven Smith",      e:"🪙",  s:"XRP · HBAR · Crypto Regulation"},
+  {id:"cris",   name:"Cristiano Pelago",  e:"🌐",  s:"Comms · Nuclear Fusion · Multi-Agent AI · Gold"},
+  {id:"huw",    name:"Huw Bishop",        e:"🛰",  s:"Defence · Space · Nuclear · Global (ex-UK)"},
+  {id:"charlie",name:"Charlie Dryden",    e:"🎮",  s:"AI Infrastructure · Space · Gaming Ecosystems"}
 ];
+
 var VC={CERTAIN:"#D42B2B",STRONG:"#FFD700",CONVICTION:"#00A651",SPECULATIVE:"#6366f1"};
+
 var S=[
-  {t:"TBC",c:"Defence Banker #1",      a:150,v:"CERTAIN",    e:"🛡",m:["anna","ben","john","paul","ian","elliot","aled","huw"],i:"8 of 13 members called defence. The world is rearming — the most unanimous pick in Clwb history."},
-  {t:"TBC",c:"Energy / Oil",           a:150,v:"CERTAIN",    e:"⚡",m:["john","paul","ian","elliot","aled","ben","nickp"],i:"Oil production shifting to Americas and Canada. Energy security is the geopolitical story of this decade."},
-  {t:"TBC",c:"AI Infrastructure",      a:120,v:"STRONG",     e:"🤖",m:["ben","nickd","cris"],i:"Not buying chips — buying what chips need. Power, networking, data centres. Three minds, same conclusion."},
-  {t:"TBC",c:"Healthcare Diagnostics", a:120,v:"STRONG",     e:"🏥",m:["anna","ian","nickd"],i:"Anna, Ian and Nick D independently called it. AI meeting precision medicine — three minds, same conclusion."},
-  {t:"TBC",c:"Rare Minerals & Mining", a:120,v:"STRONG",     e:"🪨",m:["anna","nickd","nickp"],i:"Copper, lithium, rare earths. The oil of the AI age. Anna and both Nicks converged — hard to ignore."},
-  {t:"TBC",c:"Air Freight / Transport",a:100,v:"CONVICTION", e:"✈",m:["elliot","aled"],i:"Elliot and Aled both backed it. Global trade reroutes in volatile times — air freight wins either way."},
-  {t:"TBC",c:"Defence Pick #2",        a:100,v:"CONVICTION", e:"🛡",m:["anna","ben","john","paul","ian","elliot","aled","huw"],i:"Defence too strong for one stock. European rearmament is a multi-year spend cycle just getting started."},
-  {t:"TBC",c:"Space & Comms",          a:80, v:"SPECULATIVE",e:"🛰",m:["huw","cris"],i:"Huw brings Space and Nuclear — Cristiano brings phased arrays and power beaming. Two minds, same orbit."},
-  {t:"TBC",c:"Crypto Proxy",           a:80, v:"SPECULATIVE",e:"🪙",m:["paul","steve"],i:"Paul backed MicroStrategy, Steve called XRP on the Clarity Act. High risk, high reward — could go nuclear."},
-  {t:"TBC",c:"AI Wild Card / Gold",    a:80, v:"SPECULATIVE",e:"🥇",m:["ben","nickd","steve","cris"],i:"Multi-agent AI meets gold. Nick D and Cristiano both called gold independently. The dark horse of the portfolio."}
+  {t:"TBC",c:"Defence Banker #1",      a:150,v:"CERTAIN",    e:"🛡",m:["anna","ben","john","paul","ian","elliot","aled","huw"],   i:"8 of 14 members called defence. The world is rearming — the most unanimous pick in Clwb history."},
+  {t:"TBC",c:"Energy / Oil",           a:150,v:"CERTAIN",    e:"⚡",m:["john","paul","ian","elliot","aled","ben","nickp"],        i:"Oil production shifting to Americas and Canada. Energy security is the geopolitical story of this decade."},
+  {t:"TBC",c:"AI Infrastructure",      a:120,v:"STRONG",     e:"🤖",m:["ben","nickd","cris","charlie"],                          i:"Not buying chips — buying what chips need. Power, networking, data centres. Four minds, same conclusion."},
+  {t:"TBC",c:"Healthcare Diagnostics", a:120,v:"STRONG",     e:"🏥",m:["anna","ian","nickd"],                                    i:"Anna, Ian and Nick D independently called it. AI meeting precision medicine — three minds, same conclusion."},
+  {t:"TBC",c:"Rare Minerals & Mining", a:120,v:"STRONG",     e:"🪨",m:["anna","nickd","nickp"],                                  i:"Copper, lithium, rare earths. The oil of the AI age. Anna and both Nicks converged — hard to ignore."},
+  {t:"TBC",c:"Air Freight / Transport",a:100,v:"CONVICTION", e:"✈",m:["elliot","aled"],                                         i:"Elliot and Aled both backed it. Global trade reroutes in volatile times — air freight wins either way."},
+  {t:"TBC",c:"Defence Pick #2",        a:100,v:"CONVICTION", e:"🛡",m:["anna","ben","john","paul","ian","elliot","aled","huw"],   i:"Defence too strong for one stock. European rearmament is a multi-year spend cycle just getting started."},
+  {t:"TBC",c:"Space & Comms",          a:80, v:"SPECULATIVE",e:"🛰",m:["huw","cris","charlie"],                                  i:"Huw, Cristiano and Charlie all circled space independently. Three minds — hard to ignore now."},
+  {t:"TBC",c:"Crypto Proxy",           a:80, v:"SPECULATIVE",e:"🪙",m:["paul","steve"],                                          i:"Paul backed MicroStrategy, Steve called XRP on the Clarity Act. High risk, high reward."},
+  {t:"TBC",c:"AI Wild Card / Gold",    a:80, v:"SPECULATIVE",e:"🥇",m:["ben","nickd","steve","cris","charlie"],                  i:"Multi-agent AI meets gold meets gaming ecosystems. The most eclectic slot in the portfolio — and probably the most interesting."}
 ];
+
 var TH=[
-  {e:"🛡",n:"Defence",          c:8,p:62},
-  {e:"⚡",n:"Energy / Oil",     c:7,p:54},
-  {e:"🤖",n:"AI Infrastructure",c:3,p:23},
-  {e:"🏥",n:"Healthcare",       c:3,p:23},
-  {e:"🪨",n:"Rare Minerals",    c:3,p:23},
-  {e:"⚛",n:"Nuclear Energy",   c:2,p:15},
-  {e:"🥇",n:"Gold",             c:2,p:15},
-  {e:"🛰",n:"Space & Comms",    c:2,p:15},
-  {e:"🪙",n:"Crypto",           c:2,p:15}
+  {e:"🛡",n:"Defence",            c:8, p:57},
+  {e:"⚡",n:"Energy / Oil",       c:7, p:50},
+  {e:"🤖",n:"AI Infrastructure",  c:4, p:29},
+  {e:"🏥",n:"Healthcare",         c:3, p:21},
+  {e:"🪨",n:"Rare Minerals",      c:3, p:21},
+  {e:"🛰",n:"Space & Comms",      c:3, p:21},
+  {e:"⚛",n:"Nuclear Energy",     c:2, p:14},
+  {e:"🥇",n:"Gold",               c:2, p:14},
+  {e:"🪙",n:"Crypto",             c:2, p:14},
+  {e:"🎮",n:"Gaming Ecosystems",  c:1, p:7}
 ];
 
 function go(id){
-document.querySelectorAll(’.pg’).forEach(function(p){p.classList.remove(‘on’)});
-document.querySelectorAll(’.nb’).forEach(function(b){b.classList.remove(‘on’)});
-document.getElementById(‘pg-’+id).classList.add(‘on’);
-var pages=[‘about’,‘portfolio’,‘performance’,‘report’];
-document.querySelectorAll(’.nb’)[pages.indexOf(id)].classList.add(‘on’);
-window.scrollTo(0,0);
+  document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on')});
+  document.querySelectorAll('.nb').forEach(function(b){b.classList.remove('on')});
+  document.getElementById('pg-'+id).classList.add('on');
+  var pages=['about','portfolio','performance','report'];
+  document.querySelectorAll('.nb')[pages.indexOf(id)].classList.add('on');
+  window.scrollTo(0,0);
 }
 
-// Themes
-document.getElementById(‘themes’).innerHTML=TH.map(function(t){
-return ‘<div class="trow">’+
-‘<span style="font-size:18px;flex-shrink:0">’+t.e+’</span>’+
-‘<div style="flex:1;min-width:0">’+
-‘<div style="font-size:13px;font-weight:700;color:#fff">’+t.n+’</div>’+
-‘<div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px">’+t.c+’ of 13 members</div>’+
-‘<div class="tbar-wrap"><div class="tbar" style="width:'+t.p+'%"></div></div>’+
-‘</div>’+
-‘<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;color:rgba(255,255,255,0.25);flex-shrink:0">’+t.p+’%</div>’+
-‘</div>’;
-}).join(’’);
+document.getElementById('themes').innerHTML=TH.map(function(t){
+  return '<div class="trow">'+
+    '<span style="font-size:18px;flex-shrink:0">'+t.e+'</span>'+
+    '<div style="flex:1;min-width:0">'+
+      '<div style="font-size:13px;font-weight:700;color:#fff">'+t.n+'</div>'+
+      '<div style="font-size:9px;color:rgba(255,255,255,0.35);margin-top:1px">'+t.c+' of 14 members</div>'+
+      '<div class="tbar-wrap"><div class="tbar" style="width:'+t.p+'%"></div></div>'+
+    '</div>'+
+    '<div style="font-family:\'Bebas Neue\',sans-serif;font-size:18px;color:rgba(255,255,255,0.25);flex-shrink:0">'+t.p+'%</div>'+
+  '</div>';
+}).join('');
 
-// Members
-document.getElementById(‘members’).innerHTML=M.map(function(m){
-return ‘<div class="mc">’+
-‘<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">’+
-‘<span style="font-size:15px">’+m.e+’</span>’+
-‘<span class="mn">’+m.name+’</span></div>’+
-‘<div class="ms">’+m.s+’</div></div>’;
-}).join(’’);
+document.getElementById('members').innerHTML=M.map(function(m){
+  return '<div class="mc">'+
+    '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">'+
+    '<span style="font-size:15px">'+m.e+'</span>'+
+    '<span class="mn">'+m.name+'</span></div>'+
+    '<div class="ms">'+m.s+'</div></div>';
+}).join('');
 
-// Filters
 var af=null;
-document.getElementById(‘filters’).innerHTML=
-‘<button class="fb on" onclick="sf(null,this)">ALL</button>’+
-M.map(function(m){return ‘<button class="fb" onclick="sf(\''+m.id+'\',this)">’+m.e+’ ‘+m.name.split(’ ‘)[0]+’</button>’;}).join(’’);
+document.getElementById('filters').innerHTML=
+  '<button class="fb on" onclick="sf(null,this)">ALL</button>'+
+  M.map(function(m){return '<button class="fb" onclick="sf(\''+m.id+'\',this)">'+m.e+' '+m.name.split(' ')[0]+'</button>';}).join('');
 
 function sf(id,btn){
-af=id;
-document.querySelectorAll(’.fb’).forEach(function(b){b.classList.remove(‘on’)});
-btn.classList.add(‘on’);
-bs();
+  af=id;
+  document.querySelectorAll('.fb').forEach(function(b){b.classList.remove('on')});
+  btn.classList.add('on');
+  bs();
 }
 
 function bs(){
-var list=af?S.filter(function(s){return s.m.indexOf(af)>-1}):S;
-document.getElementById(‘stocks’).innerHTML=list.map(function(s){
-var tags=s.m.map(function(mid){
-var m=M.find(function(x){return x.id===mid});
-return m?’<span class="mtag">’+m.e+’ ‘+m.name.split(’ ‘)[0]+’</span>’:’’;
-}).join(’’);
-return ‘<div class="sc" style="border-left-color:'+VC[s.v]+'">’+
-‘<div class="stop">’+
-‘<div class="sleft"><span style="font-size:20px;flex-shrink:0">’+s.e+’</span>’+
-‘<div><div class="sticker">’+s.t+’</div><div class="sco">’+s.c+’</div></div></div>’+
-‘<div class="sright"><div class="spend">PENDING</div><div class="salloc">£’+s.a+’</div></div></div>’+
-‘<div class="sinf">”’+s.i+’”</div>’+
-‘<div class="sbot"><div class="smems">’+tags+’</div><span class="vb v'+s.v+'">’+s.v+’</span></div></div>’;
-}).join(’’);
+  var list=af?S.filter(function(s){return s.m.indexOf(af)>-1}):S;
+  document.getElementById('stocks').innerHTML=list.map(function(s){
+    var tags=s.m.map(function(mid){
+      var m=M.find(function(x){return x.id===mid});
+      return m?'<span class="mtag">'+m.e+' '+m.name.split(' ')[0]+'</span>':'';
+    }).join('');
+    return '<div class="sc" style="border-left-color:'+VC[s.v]+'">'+
+      '<div class="stop">'+
+        '<div class="sleft"><span style="font-size:20px;flex-shrink:0">'+s.e+'</span>'+
+          '<div><div class="sticker">'+s.t+'</div><div class="sco">'+s.c+'</div></div></div>'+
+        '<div class="sright"><div class="spend">PENDING</div><div class="salloc">£'+s.a+'</div></div></div>'+
+      '<div class="sinf">"'+s.i+'"</div>'+
+      '<div class="sbot"><div class="smems">'+tags+'</div><span class="vb v'+s.v+'">'+s.v+'</span></div></div>';
+  }).join('');
 }
 bs();
 
-// Bars
-document.getElementById(‘bars’).innerHTML=S.map(function(s){
-return ‘<div class="brow">’+
-‘<span style="font-size:14px;width:20px;text-align:center;flex-shrink:0">’+s.e+’</span>’+
-‘<div class="btrack"><div class="bfill" style="width:'+(s.a/150*100)+'%;background:'+VC[s.v]+'"></div></div>’+
-‘<span class="bamt">£’+s.a+’</span></div>’;
-}).join(’’);
+document.getElementById('bars').innerHTML=S.map(function(s){
+  return '<div class="brow">'+
+    '<span style="font-size:14px;width:20px;text-align:center;flex-shrink:0">'+s.e+'</span>'+
+    '<div class="btrack"><div class="bfill" style="width:'+(s.a/150*100)+'%;background:'+VC[s.v]+'"></div></div>'+
+    '<span class="bamt">£'+s.a+'</span></div>';
+}).join('');
 
-// Line chart
 (function(){
-var d=[1300,1300,1300,1300,1300,1300,1300,1300,1300,1300];
-var w=460,h=140,p=10,mn=900,mx=1800;
-var pts=d.map(function(v,i){return (p+(i/(d.length-1))*(w-p*2))+’,’+(h-p-((v-mn)/(mx-mn))*(h-p*2));});
-var el=document.getElementById(‘lsvg’);
-el.innerHTML=’<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D42B2B" stop-opacity="0.4"/><stop offset="100%" stop-color="#D42B2B" stop-opacity="0"/></linearGradient></defs>’+
-‘<path d="M '+p+','+h+' L '+pts.join(' L ')+' L '+(w-p)+','+h+' Z" fill="url(#g)"/>’+
-‘<path d="M '+pts.join(' L ')+'" fill="none" stroke="#D42B2B" stroke-width="2"/>’+
-pts.map(function(pt){var c=pt.split(’,’);return ‘<circle cx="'+c[0]+'" cy="'+c[1]+'" r="3" fill="#D42B2B"/>’;}).join(’’);
+  var d=[1400,1400,1400,1400,1400,1400,1400,1400,1400,1400];
+  var w=460,h=140,p=10,mn=900,mx=1800;
+  var pts=d.map(function(v,i){return (p+(i/(d.length-1))*(w-p*2))+','+(h-p-((v-mn)/(mx-mn))*(h-p*2));});
+  document.getElementById('lsvg').innerHTML=
+    '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D42B2B" stop-opacity="0.4"/><stop offset="100%" stop-color="#D42B2B" stop-opacity="0"/></linearGradient></defs>'+
+    '<path d="M '+p+','+h+' L '+pts.join(' L ')+' L '+(w-p)+','+h+' Z" fill="url(#g)"/>'+
+    '<path d="M '+pts.join(' L ')+'" fill="none" stroke="#D42B2B" stroke-width="2"/>'+
+    pts.map(function(pt){var c=pt.split(',');return '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="3" fill="#D42B2B"/>';}).join('');
 })();
 
-// Report + countdown
 (function(){
-var now=new Date();
-document.getElementById(‘rmonth’).textContent=now.toLocaleString(‘en-GB’,{month:‘long’}).toUpperCase()+’ ‘+now.getFullYear();
-var days=Math.max(0,Math.ceil((new Date(‘2026-12-25’)-now)/86400000));
-document.getElementById(‘rdays’).textContent=days+’ days until Christmas Day 2026’;
-document.getElementById(‘cdays’).textContent=days;
+  var now=new Date();
+  document.getElementById('rmonth').textContent=now.toLocaleString('en-GB',{month:'long'}).toUpperCase()+' '+now.getFullYear();
+  var days=Math.max(0,Math.ceil((new Date('2026-12-25')-now)/86400000));
+  document.getElementById('rdays').textContent=days+' days until Christmas 2026';
+  document.getElementById('cdays').textContent=days;
 })();
 </script>
 
