@@ -94,7 +94,12 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
 .fr{font-size:10px;color:rgba(212,43,43,0.6)}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,166,81,0.6)}50%{opacity:0.7;box-shadow:0 0 0 5px rgba(0,166,81,0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
+
+.slinks{display:flex;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06)}
+.slink{font-family:‘Space Mono’,monospace;font-size:9px;color:rgba(255,255,255,0.5);text-decoration:none;padding:4px 8px;border:1px solid rgba(255,255,255,0.12);border-radius:3px;letter-spacing:0.5px;transition:all 0.2s}
+.slink:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05)}
 </style>
+
 </head>
 <body>
 <div class="wrap">
@@ -268,6 +273,32 @@ var M=[
 
 var VC={CERTAIN:"#D42B2B",STRONG:"#FFD700",CONVICTION:"#00A651",SPECULATIVE:"#6366f1"};
 
+var LOGOS={
+  "RHM": "https://logo.clearbit.com/rheinmetall.com",
+  "OXY": "https://logo.clearbit.com/oxy.com",
+  "CEG": "https://logo.clearbit.com/constellationenergy.com",
+  "GH":  "https://logo.clearbit.com/guardanthealth.com",
+  "MP":  "https://logo.clearbit.com/mpmaterials.com",
+  "RR.L":"https://logo.clearbit.com/rolls-royce.com",
+  "BA.L":"https://logo.clearbit.com/baesystems.com",
+  "PLTR":"https://logo.clearbit.com/palantir.com",
+  "XRP": "https://logo.clearbit.com/bitwiseinvestments.com",
+  "GEV": "https://logo.clearbit.com/gevernova.com"
+};
+
+var LINKS={
+  "RHM":{web:"https://www.rheinmetall.com/en",news:"https://www.google.com/search?q=Rheinmetall+RHM+stock+latest+news+2026&tbm=nws"},
+  "OXY":{web:"https://www.oxy.com",news:"https://www.google.com/search?q=Occidental+Petroleum+OXY+stock+latest+news+2026&tbm=nws"},
+  "CEG":{web:"https://www.constellationenergy.com",news:"https://www.google.com/search?q=Constellation+Energy+CEG+stock+latest+news+2026&tbm=nws"},
+  "GH":{web:"https://guardanthealth.com",news:"https://www.google.com/search?q=Guardant+Health+GH+stock+latest+news+2026&tbm=nws"},
+  "MP":{web:"https://mpmaterials.com",news:"https://www.google.com/search?q=MP+Materials+MP+stock+latest+news+2026&tbm=nws"},
+  "RR.L":{web:"https://www.rolls-royce.com",news:"https://www.google.com/search?q=Rolls-Royce+RR+stock+latest+news+2026&tbm=nws"},
+  "BA.L":{web:"https://www.baesystems.com",news:"https://www.google.com/search?q=BAE+Systems+stock+latest+news+2026&tbm=nws"},
+  "PLTR":{web:"https://www.palantir.com",news:"https://www.google.com/search?q=Palantir+PLTR+stock+latest+news+2026&tbm=nws"},
+  "XRP":{web:"https://bitwiseinvestments.com/crypto-funds/xrp",news:"https://www.google.com/search?q=XRP+Bitwise+ETF+latest+news+2026&tbm=nws"},
+  "GEV":{web:"https://www.gevernova.com",news:"https://www.google.com/search?q=GE+Vernova+GEV+stock+latest+news+2026&tbm=nws"},
+};
+
 var S=[
   {t:"RHM", n:"Rheinmetall AG",        c:"Defence · Frankfurt",   a:250,v:"CERTAIN",    e:"🛡",m:["anna","ben","john","paul","ian","elliot","aled","huw"],   i:"The most unanimous pick in Clwb history — 8 of 14 members called defence. Rheinmetall is Europe's arsenal. 42% EPS growth, €80B order backlog, and Germany just raised its defence budget 45%. Goldman Sachs target: €2,200. The world is rearming and RHM is the factory floor."},
   {t:"OXY", n:"Occidental Petroleum",  c:"Energy · NYSE",         a:250,v:"CERTAIN",    e:"⚡",m:["john","paul","ian","elliot","aled","ben","nickp"],        i:"Warren Buffett's favourite oil stock — and we're buying it below his average entry price. OXY cleared $5.8B of debt, runs pure upstream operations, and sits in the sweet spot if the Iran conflict escalates. Seven members converged on energy. This is the clearest one."},
@@ -344,11 +375,17 @@ function bs(){
     }).join('');
     return '<div class="sc" style="border-left-color:'+VC[s.v]+'">'+
       '<div class="stop">'+
-        '<div class="sleft"><span style="font-size:20px;flex-shrink:0">'+s.e+'</span>'+
+        '<div class="sleft">'+
+        (LOGOS[s.t]?'<img src="'+LOGOS[s.t]+'" alt="'+s.t+'" style="width:32px;height:32px;object-fit:contain;border-radius:4px;background:#fff;padding:2px;flex-shrink:0" onerror="this.style.display=\'none\'">':
+          '<span style="font-size:20px;flex-shrink:0">'+s.e+'</span>')+
           '<div><div class="sticker">'+s.t+'</div><div class="sco">'+s.n+'</div><div class="sco" style="opacity:0.5">'+s.c+'</div></div></div>'+
         '<div class="sright"><div class="spend">PENDING</div><div class="salloc">£'+s.a+'</div></div></div>'+
       '<div class="sinf">"'+s.i+'"</div>'+
-      '<div class="sbot"><div class="smems">'+tags+'</div><span class="vb v'+s.v+'">'+s.v+'</span></div></div>';
+      '<div class="sbot"><div class="smems">'+tags+'</div><span class="vb v'+s.v+'">'+s.v+'</span></div>'+
+      (LINKS[s.t]?'<div class="slinks">'+
+        '<a class="slink" href="'+LINKS[s.t].web+'" target="_blank" rel="noopener">🌐 Website</a>'+
+        '<a class="slink" href="'+LINKS[s.t].news+'" target="_blank" rel="noopener">📰 Latest News</a>'+
+      '</div>':'')+'</div>';
   }).join('');
 }
 bs();
