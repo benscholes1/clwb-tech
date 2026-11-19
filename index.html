@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Clwb Tech 2026</title>
 <meta property="og:title" content="Clwb Tech — Investor Clwb 2026"/>
-<meta property="og:description" content="14 members. £1,400. 10 stocks. We win together or lose together. Christmas 2026."/>
+<meta property="og:description" content="14 members. £1,400. 9 stocks. We win together or lose together. Sell day 20 December 2026."/>
 <meta property="og:url" content="https://clwbtech.netlify.app"/>
 <meta property="og:image" content="https://clwbtech.netlify.app/preview.png"/>
 <meta property="og:type" content="website"/>
@@ -96,8 +96,72 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
 
 .slinks{display:flex;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06)}
-.slink{font-family:‘Space Mono’,monospace;font-size:9px;color:rgba(255,255,255,0.5);text-decoration:none;padding:4px 8px;border:1px solid rgba(255,255,255,0.12);border-radius:3px;letter-spacing:0.5px;transition:all 0.2s}
+.slink{font-family:'Space Mono',monospace;font-size:9px;color:rgba(255,255,255,0.5);text-decoration:none;padding:4px 8px;border:1px solid rgba(255,255,255,0.12);border-radius:3px;letter-spacing:0.5px;transition:all 0.2s}
 .slink:hover{color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05)}
+
+/* ===== Nov 2026 update ===== */
+.up{color:#4ade80}.dn{color:#ff8080}.flat{color:rgba(255,255,255,0.55)}
+.mval{font-family:'Bebas Neue',sans-serif;font-size:68px;letter-spacing:2px;line-height:1;font-variant-numeric:tabular-nums}
+.mdelta{font-size:12px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+.msub{font-size:9px;letter-spacing:1px;color:rgba(255,255,255,0.4);margin-top:3px;min-height:12px}
+.chartwrap{margin:10px -4px 0;touch-action:pan-y;-webkit-user-select:none;user-select:none}
+.chartwrap svg{display:block;width:100%;height:auto;overflow:visible}
+.xl{display:flex;justify-content:space-between;font-size:8px;letter-spacing:.5px;color:rgba(255,255,255,0.3);margin-top:6px;padding:0 4px}
+.xl span{padding:2px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.xl span.on{color:#fff;border-bottom-color:var(--red)}
+.cbtns{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}
+.btn{font-size:9px;letter-spacing:1px;color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:3px;padding:7px 11px}
+.btn:focus-visible,.chip:focus-visible,.fb:focus-visible,.nb:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.seg{display:flex}
+.seg .btn{border-radius:0}
+.seg .btn:first-child{border-radius:3px 0 0 3px}
+.seg .btn:last-child{border-radius:0 3px 3px 0;border-left:none}
+.seg .btn.on{background:rgba(212,43,43,0.22);border-color:rgba(212,43,43,0.55);color:#fff}
+.hint{font-size:8px;letter-spacing:1px;color:rgba(255,255,255,0.25);margin-top:10px;text-align:center}
+.pnote{font-size:9px;color:rgba(255,255,255,0.35);line-height:1.6;margin-top:6px;text-align:center}
+.prow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.prow:last-child{border-bottom:none;padding-bottom:0}
+.prow:first-child{padding-top:0}
+.pid{flex:1;min-width:0}
+.pid .t{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;line-height:1}
+.pid .n{font-size:9px;color:rgba(255,255,255,0.4);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pspk{flex:0 0 84px}
+.pval{flex:0 0 74px;text-align:right;font-variant-numeric:tabular-nums}
+.pval b{display:block;font-size:12px}
+.pval span{font-size:10px;font-weight:700}
+.lgo{width:30px;height:30px;object-fit:contain;border-radius:4px;background:#fff;padding:2px;flex-shrink:0}
+.lgo-e{width:30px;text-align:center;font-size:20px;flex-shrink:0}
+.s3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:10px 0 6px}
+.sv{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:1px;line-height:1.15;font-variant-numeric:tabular-nums}
+.bought{font-size:8px;letter-spacing:1.5px;color:#4ade80;font-weight:700}
+.notbought{font-size:8px;letter-spacing:1.5px;color:rgba(255,215,0,0.8);font-weight:700}
+.sparkbig{margin:6px 0 2px}
+.spk-lbl{display:flex;justify-content:space-between;font-size:8px;letter-spacing:1px;color:rgba(255,255,255,0.25)}
+.sc.np{border-left-color:rgba(255,255,255,0.2);opacity:.85}
+.chip-row{display:flex;gap:6px;overflow-x:auto;padding:2px 0 6px;margin-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.chip-row::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font-size:9px;letter-spacing:1px;padding:8px 12px;border-radius:3px;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.03)}
+.chip.on{background:rgba(212,43,43,0.22);border-color:rgba(212,43,43,0.6);color:#fff}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:12px 0}
+.tile{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:4px;padding:8px 6px;text-align:center;min-width:0}
+.tile .pv{font-size:18px}
+.pbul{list-style:none;margin:0 0 12px}
+.pbul li{position:relative;padding:0 0 10px 16px;font-size:12px;line-height:1.75;color:rgba(255,255,255,0.7)}
+.pbul li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:2px;background:linear-gradient(90deg,var(--red),var(--green))}
+.ptitle{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;line-height:1.05}
+.tbc{display:inline-block;font-size:7px;letter-spacing:1px;padding:1px 5px;margin-left:4px;border-radius:2px;background:rgba(255,215,0,0.14);color:#FFD700;border:1px solid rgba(255,215,0,0.4);vertical-align:middle}
+.orow{display:flex;justify-content:space-between;gap:12px;font-size:11px;line-height:1.6;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:rgba(255,255,255,0.65)}
+.orow:last-of-type{border-bottom:none}
+.orow b{white-space:nowrap;font-variant-numeric:tabular-nums}
+.party{font-size:11px;color:rgba(255,215,0,0.85);letter-spacing:1px;margin-top:10px;line-height:1.7}
+details.tv{margin-top:2px}
+details.tv summary{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.4);cursor:pointer;padding:6px 0}
+.tv-wrap{overflow-x:auto}
+.tv table{width:100%;border-collapse:collapse;font-size:10px;font-variant-numeric:tabular-nums;margin-top:6px}
+.tv th,.tv td{padding:6px 4px;text-align:right;border-bottom:1px solid rgba(255,255,255,0.06);white-space:nowrap}
+.tv th:first-child,.tv td:first-child{text-align:left}
+.tv th{font-size:8px;letter-spacing:1px;color:rgba(255,255,255,0.35);font-weight:400}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
 </head>
@@ -133,12 +197,11 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
       <div class="htxt">
         Born March 2026 — right after the world changed.<br>
         Iran. Israel. Ukraine still burning. Trump back in power.<br><br>
-        <span style="color:#4ade80">14 members. £1,400. 10 stocks.</span><br>
-        Christmas 2026. 🐉
+        <span style="color:#4ade80">14 members. £1,400. 9 stocks.</span><br>
+        Sell day: 20 December 2026. 🐉
       </div>
     </div>
 
-```
 <div class="card" style="background:linear-gradient(135deg,rgba(212,43,43,0.12),rgba(255,215,0,0.06));border:1px solid rgba(255,215,0,0.2);text-align:center;padding:20px 16px">
   <div style="font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:4px;color:rgba(255,215,0,0.7);margin-bottom:8px">YR EFFAITH CLWB — THE CLWB EFFECT</div>
   <div style="font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;color:#fff;line-height:1">WE WIN TOGETHER</div>
@@ -159,9 +222,9 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
 <div class="card">
   <div class="lbl">Y RHEOLAU — THE RULES</div>
   <div class="rr"><span class="re">💷</span><div><div class="rt">£100 per member</div><div class="rd">14 members = £1,400 total pot</div></div></div>
-  <div class="rr"><span class="re">📈</span><div><div class="rt">10 stocks</div><div class="rd">Weighted by conviction — not split equally</div></div></div>
-  <div class="rr"><span class="re">🗓️</span><div><div class="rt">Buy in March 2026</div><div class="rd">Sell Christmas 2026 — no exceptions</div></div></div>
-  <div class="rr"><span class="re">🏦</span><div><div class="rt">Platform: Freetrade / Interactive Investor</div><div class="rd">Account held by Ben Scholes</div></div></div>
+  <div class="rr"><span class="re">📈</span><div><div class="rt">9 stocks</div><div class="rd">Weighted by conviction — not split equally</div></div></div>
+  <div class="rr"><span class="re">🗓️</span><div><div class="rt">Bought 16–17 March 2026</div><div class="rd">Sell day 20 December 2026 — beer &amp; pizza at the Panton Arms</div></div></div>
+  <div class="rr"><span class="re">🏦</span><div><div class="rt">Platform: Freetrade</div><div class="rd">Account held by Ben Scholes</div></div></div>
   <div class="rr" style="margin-bottom:0"><span class="re">🚫</span><div><div class="rt">No selling early</div><div class="rd">Hold your nerve. That is the game.</div></div></div>
 </div>
 
@@ -174,7 +237,6 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
   <div class="lbl">YR AELODAU — THE MEMBERS</div>
   <div class="mgrid" id="members"></div>
 </div>
-```
 
   </div>
 
@@ -183,12 +245,13 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
   <div class="pg" id="pg-portfolio">
     <div class="card" style="padding:14px 16px">
       <div class="pgrid">
-        <div><div class="pl">POT</div><div class="pv" style="color:rgba(255,255,255,0.5)">£1,400</div></div>
-        <div><div class="pl">VALUE</div><div class="pv" style="color:#4ade80">£1,400</div></div>
-        <div><div class="pl">RETURN</div><div class="pv" style="color:#4ade80">0.0%</div></div>
+        <div><div class="pl">POT</div><div class="pv" id="s-pot" style="color:rgba(255,255,255,0.5)"></div></div>
+        <div><div class="pl">VALUE</div><div class="pv" id="s-val"></div></div>
+        <div><div class="pl">RETURN</div><div class="pv" id="s-ret"></div></div>
       </div>
+      <div class="pnote" id="s-note"></div>
     </div>
-    <div class="notice-green">✅ WEDI EI ARIANNU — Fully funded. £1,400 from 14 members. Stock picks incoming. 🐉</div>
+    <div class="notice-green">✅ WEDI PRYNU — All 9 picks bought on Freetrade, 16–17 March 2026. 🐉</div>
     <div class="flbl">HIDLO — FILTER BY MEMBER</div>
     <div class="fwrap" id="filters"></div>
     <div class="slist" id="stocks"></div>
@@ -197,16 +260,34 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
   <!-- PERFORMANCE -->
 
   <div class="pg" id="pg-performance">
-    <div class="notice-gold">⏳ STOCIAU YN DOD — Stock picks incoming. Performance tracking starts once purchased.</div>
     <div class="card">
-      <div class="lbl">GWERTH Y PORTFFOLIO — PORTFOLIO VALUE 2026</div>
-      <svg id="lsvg" viewBox="0 0 460 140" style="width:100%;height:140px;display:block" preserveAspectRatio="none"></svg>
-      <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,0.3);margin-top:6px">
-        <span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+      <div class="lbl">GWERTH POB £100 — WHAT EACH MEMBER'S £100 IS WORTH</div>
+      <div class="mval" id="mv">£100.00</div>
+      <div class="mdelta flat" id="md">—</div>
+      <div class="msub" id="msub"></div>
+      <div class="chartwrap">
+        <svg id="msvg" viewBox="0 0 460 220" role="img" aria-label="Line chart of what each member's £100 was worth from purchase in March to 19 November 2026"></svg>
       </div>
+      <div class="xl" id="xl"></div>
+      <div class="cbtns">
+        <button class="btn" id="replay" type="button">▶ REPLAY</button>
+        <div class="seg" role="group" aria-label="Chart view">
+          <button class="btn on" type="button" data-mode="member">PER £100</button>
+          <button class="btn" type="button" data-mode="fund">WHOLE FUND</button>
+        </div>
+      </div>
+      <div class="hint">TAP OR DRAG THE CHART TO SCRUB THROUGH THE YEAR</div>
+      <details class="tv">
+        <summary>TABL — VIEW AS A TABLE</summary>
+        <div class="tv-wrap"><table id="tbl"></table></div>
+      </details>
     </div>
     <div class="card">
-      <div class="lbl">DYRANIAD — ALLOCATION BY CONVICTION</div>
+      <div class="lbl">PERFFORMIAD PER STOC — SINCE BUYING (£)</div>
+      <div id="prows"></div>
+    </div>
+    <div class="card">
+      <div class="lbl">DYRANIAD — WHAT WE PAID, BY CONVICTION</div>
       <div id="bars"></div>
       <div class="leg">
         <div class="li"><div class="ld" style="background:#D42B2B"></div>CERTAIN</div>
@@ -227,28 +308,28 @@ button{cursor:pointer;font-family:'Space Mono',monospace;border:none;background:
       </svg>
       <div class="lbl" style="color:rgba(255,215,0,0.7)">ADRODDIAD MISOL — MONTHLY REPORT</div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px" id="rmonth"></div>
-      <div style="font-size:10px;color:rgba(255,255,255,0.35);margin-top:4px" id="rdays"></div>
+      <div style="font-size:10px;color:rgba(255,255,255,0.45);margin-top:4px" id="rdays"></div>
+    </div>
+    <div class="chip-row" id="chips" role="tablist" aria-label="Choose a month"></div>
+    <div class="card" id="post"></div>
+    <div class="card">
+      <div class="lbl">SUT MAE HI NAWR — WHERE WE STAND (19 NOV)</div>
+      <div id="outlook"></div>
+    </div>
+    <div class="card" style="text-align:center">
+      <div class="lbl" style="text-align:center">AMSER TAN Y DDYDD MAWR — TIME UNTIL SELL DAY</div>
+      <div class="cnum" id="cdays">0</div>
+      <div class="clbl">DIWRNOD — DAYS TO 20 DECEMBER</div>
+      <div class="party">🍺 BEER &amp; PIZZA FOR THE CLWB 🍕<br>THE PANTON ARMS</div>
     </div>
     <div class="card">
       <div class="lbl">ADRODDIAD GAN BEN — REPORT FROM BEN</div>
-      <div class="rtxt">
-        <p><span style="color:#FFD700">Bore da, Clwb Tech. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></p>
-        <p>14 members. £1,400 in the pot. Every payment is in.</p>
-        <p>The themes came back clear: <span style="color:#D42B2B">Defence</span> and <span style="color:#D42B2B">Energy</span> near-unanimous. <span style="color:#FFD700">AI Infrastructure</span>, <span style="color:#FFD700">Healthcare</span> and <span style="color:#FFD700">Rare Minerals</span> strong secondary bets. A handful of wild cards that could go nuclear.</p>
-        <p>Two members called Space. Two called Nuclear. One called Gaming ecosystems. One predicted quantum computing crashes crypto and gold hits five figures. This is not a normal investment club.</p>
-        <p>Stock picks incoming. Once we pull the trigger — nothing moves until Christmas 2026. That is the game. Yr Effaith Clwb — we win together or lose together.</p>
-        <p style="color:rgba(255,255,255,0.3);font-size:10px;border-top:1px solid rgba(255,255,255,0.07);padding-top:12px">Monthly reports update here once live. Performance, world events, bragging rights. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
-      </div>
-    </div>
-    <div class="card" style="text-align:center">
-      <div class="lbl" style="text-align:center">AMSER TAN Y NADOLIG — TIME UNTIL CHRISTMAS</div>
-      <div class="cnum" id="cdays"></div>
-      <div class="clbl">DIWRNOD — DAYS</div>
+      <div class="rtxt" id="ben"></div>
     </div>
   </div>
 
   <div class="ftr">
-    <div class="fl">WIN TOGETHER · LOSE TOGETHER · DEC 2026</div>
+    <div class="fl">WIN TOGETHER · LOSE TOGETHER · 20 DEC 2026</div>
     <div class="fr">🐉 YR EFFAITH CLWB</div>
   </div>
 </div>
@@ -274,7 +355,6 @@ var M=[
 var VC={CERTAIN:"#D42B2B",STRONG:"#FFD700",CONVICTION:"#00A651",SPECULATIVE:"#6366f1"};
 
 var LOGOS={
-  "RHM": "https://logo.clearbit.com/rheinmetall.com",
   "OXY": "https://logo.clearbit.com/oxy.com",
   "CEG": "https://logo.clearbit.com/constellationenergy.com",
   "GH":  "https://logo.clearbit.com/guardanthealth.com",
@@ -282,12 +362,10 @@ var LOGOS={
   "RR.L":"https://logo.clearbit.com/rolls-royce.com",
   "BA.L":"https://logo.clearbit.com/baesystems.com",
   "PLTR":"https://logo.clearbit.com/palantir.com",
-  "XRP": "https://logo.clearbit.com/bitwiseinvestments.com",
   "GEV": "https://logo.clearbit.com/gevernova.com"
 };
 
 var LINKS={
-  "RHM":{web:"https://www.rheinmetall.com/en",news:"https://www.google.com/search?q=Rheinmetall+RHM+stock+latest+news+2026&tbm=nws"},
   "OXY":{web:"https://www.oxy.com",news:"https://www.google.com/search?q=Occidental+Petroleum+OXY+stock+latest+news+2026&tbm=nws"},
   "CEG":{web:"https://www.constellationenergy.com",news:"https://www.google.com/search?q=Constellation+Energy+CEG+stock+latest+news+2026&tbm=nws"},
   "GH":{web:"https://guardanthealth.com",news:"https://www.google.com/search?q=Guardant+Health+GH+stock+latest+news+2026&tbm=nws"},
@@ -295,11 +373,11 @@ var LINKS={
   "RR.L":{web:"https://www.rolls-royce.com",news:"https://www.google.com/search?q=Rolls-Royce+RR+stock+latest+news+2026&tbm=nws"},
   "BA.L":{web:"https://www.baesystems.com",news:"https://www.google.com/search?q=BAE+Systems+stock+latest+news+2026&tbm=nws"},
   "PLTR":{web:"https://www.palantir.com",news:"https://www.google.com/search?q=Palantir+PLTR+stock+latest+news+2026&tbm=nws"},
-  "XRP":{web:"https://bitwiseinvestments.com/crypto-funds/xrp",news:"https://www.google.com/search?q=XRP+Bitwise+ETF+latest+news+2026&tbm=nws"},
   "GEV":{web:"https://www.gevernova.com",news:"https://www.google.com/search?q=GE+Vernova+GEV+stock+latest+news+2026&tbm=nws"},
+  "NATP.L":{web:"https://hanetf.com",news:"https://www.google.com/search?q=HANetf+Future+of+Defence+UCITS+ETF+latest+news&tbm=nws"},
 };
 
-var S=[
+var S0=[
   {t:"RHM", n:"Rheinmetall AG",        c:"Defence · Frankfurt",   a:250,v:"CERTAIN",    e:"🛡",m:["anna","ben","john","paul","ian","elliot","aled","huw"],   i:"The most unanimous pick in Clwb history — 8 of 14 members called defence. Rheinmetall is Europe's arsenal. 42% EPS growth, €80B order backlog, and Germany just raised its defence budget 45%. Goldman Sachs target: €2,200. The world is rearming and RHM is the factory floor."},
   {t:"OXY", n:"Occidental Petroleum",  c:"Energy · NYSE",         a:250,v:"CERTAIN",    e:"⚡",m:["john","paul","ian","elliot","aled","ben","nickp"],        i:"Warren Buffett's favourite oil stock — and we're buying it below his average entry price. OXY cleared $5.8B of debt, runs pure upstream operations, and sits in the sweet spot if the Iran conflict escalates. Seven members converged on energy. This is the clearest one."},
   {t:"CEG", n:"Constellation Energy",  c:"AI / Nuclear · NASDAQ", a:220,v:"STRONG",     e:"🤖",m:["ben","nickd","cris","charlie"],                          i:"America's largest nuclear fleet powering the AI revolution. CEG signed 20-year power deals with Meta (1.1GW) and restarted Three Mile Island for Microsoft. 23 analyst median target: $406 — roughly 40% upside from here. Four members called AI infrastructure. This is what the chips need: clean, reliable, always-on power."},
@@ -310,7 +388,7 @@ var S=[
   {t:"PLTR",n:"Palantir Technologies", c:"AI / Intel · NYSE",     a:80, v:"SPECULATIVE",e:"🛰",m:["huw","cris","charlie"],                                  i:"The AI operating system for militaries and intelligence agencies. 63% revenue growth YoY in Q3 2025, 40%+ operating margins, expanding into commercial AI fast. Huw, Cristiano and Charlie all circled it independently — space, comms, multi-agent AI. Three minds, same name."},
   {t:"XRP", n:"Bitwise XRP ETF",       c:"Crypto · NYSE",         a:80, v:"SPECULATIVE",e:"🪙",m:["paul","steve"],                                          i:"The Ripple SEC case resolved in August 2025. XRP now has 43 consecutive days of ETF inflows and absorbed $483M in December alone. Steve called the Clarity Act catalyst early. Paul wanted crypto in the portfolio. High risk, real regulatory tailwind."},
   {t:"GEV", n:"GE Vernova",            c:"Energy Tech · NYSE",    a:80, v:"SPECULATIVE",e:"🥇",m:["ben","nickd","steve","cris","charlie"],                  i:"Orders up 34% to $59.3B in 2025. $150B backlog. Gas turbines, wind, grid modernisation, nuclear services — GE Vernova is the infrastructure layer for every energy transition. BlackRock named it a top AI energy pick. Five members backed the wild card slot. This is the one that could surprise everyone."}
-]
+];
 
 var TH=[
   {e:"🛡",n:"Defence",            c:8, p:57},
@@ -325,16 +403,77 @@ var TH=[
   {e:"🎮",n:"Gaming Ecosystems",  c:1, p:7}
 ];
 
+var POSTS=[{"name": "March", "title": "We bought", "est": false, "bullets": ["On 16–17 March we put £1,303.95 into nine holdings: Occidental, Constellation Energy, Guardant Health, MP Materials, Rolls-Royce, BAE Systems, Palantir, GE Vernova and the HANetf Future of Defence ETF. £96.05 stayed in cash.", "We bought into a shock. The Iran war began at the end of February and oil jumped by about half to roughly $111 a barrel in March, with the Strait of Hormuz closed.", "Occidental was the early winner: £249.56 became £281.29 (+12.7%) by month-end. Only about 14% of its barrels come from the affected region, so it gained from the price without much of the risk.", "Early laggards: MP Materials -19% (£119.79 to £96.84), Constellation -9%, the defence ETF -6%, Rolls-Royce -8%. {{TBC}}", "Lesson: buying straight after a shock means a rough first fortnight. We finished the month 2.6% below what we put in."]}, {"name": "April", "title": "Rare earths and turbines take over", "est": false, "bullets": ["MP Materials was the star: +£32 (+33%). Rare-earth stocks re-rated across the sector (a peer jumped 72%), Wedbush started coverage with a $90 target, and US–China tension kept the case for a home-grown supply chain alive. The Pentagon's $110/kg NdPr price floor adds support to earnings.", "GE Vernova rose about 21% (+£17) after a strong first quarter: orders of $18.1B, a $163B backlog and raised 2026 guidance, all driven by data-centre demand for turbines and grid kit.", "Constellation added £18 (+9%).", "Giving back: Occidental -£26 (-9%) as March's oil spike cooled {{TBC}}, and Guardant -£10.", "Lesson: our best month came from two themes (rare earths and AI power) that barely overlap. That's what diversification looks like."]}, {"name": "May", "title": "Guardant lights up", "est": false, "bullets": ["First month in profit. Guardant jumped £58 (+51%) after its 7 May results: revenue up 48% to $301.7M, screening revenue more than six times higher, and full-year guidance raised to $1.30–1.32B.", "The defence ETF added £30 (+13%) {{TBC}}, and Palantir rose about 14%.", "Constellation (-£15) and Occidental (-£14) slipped, and MP started to fade after April's spike.", "Lesson: one good earnings report can move a stock by half. That's why we spread the pot across nine names."]}, {"name": "June", "title": "Software scare hits Palantir", "est": false, "bullets": ["A wobbly month. Palantir fell £19 (-24%) to £60, its low for the year, as AI-disruption fears hit software stocks. It had roughly halved from its November 2025 peak by the June low.", "Occidental lost £31 (-13%) and Constellation £25 (-12%). {{TBC}}", "GE Vernova (+£21, +23%) and Guardant (+£30, +18%) helped cushion the fall.", "We stayed just above the pot (+0.5%) thanks to those two.", "Lesson: a falling price isn't always bad news about the business. Palantir's revenue was still growing fast."]}, {"name": "July", "title": "Giving back", "est": false, "bullets": ["MP Materials slid £31 (-28%) over the month, down to £81 (it was £129 in April). {{TBC}}", "GE Vernova fell £19 (-17%), and Palantir stayed near its lows at £62 (from £80 at purchase).", "Offsetting that, Occidental rose £32 (+15%) and BAE £10 (+14%) {{TBC}}. Rolls-Royce held up well (£117, +19% on cost).", "Lesson: while some stocks fall, others rise. The portfolio was still above our pot because of it."]}, {"name": "August", "title": "The peak", "est": false, "bullets": ["Our best month, and the high point of the year. Palantir surged £32 (+51%) after Q2 results: revenue up 93% to $1.94B, earnings per share up 156%, and US commercial revenue up 149%.", "MP Materials bounced back £26 (+32%) {{TBC}}.", "Rolls-Royce (£122) and the defence ETF (£258) both reached their highs.", "Lesson: the stocks that hurt us most in June and July produced our biggest rebound. Selling at the bottom would have locked in the loss."]}, {"name": "September", "title": "Quiet month, busy underneath", "est": false, "bullets": ["A flat total hid a lot of movement. Guardant rose £31 (+15%) to a high of £240, and GE Vernova gained £7.", "MP (-£13) and Occidental (-£15) both fell.", "Rolls-Royce began to slide late in the month on fears that high jet-fuel costs would cut airline flying and engine servicing.", "Lesson: a quiet total can hide big winners and losers cancelling each other out."]}, {"name": "October", "title": "Oil to the rescue, engines stall", "est": false, "bullets": ["Occidental rose £35 (+14.5%) to £274 {{TBC}}, offsetting weakness elsewhere.", "Rolls-Royce fell £18 (-15%) as airlines and fuel costs worried investors. Peers GE Aerospace and Safran reported solid numbers but cautious outlooks.", "MP lost another £16 (-17%) and ended October at its lowest, £78 against £120 at purchase.", "BAE added £4 but is still 11% below cost {{TBC}}.", "Lesson: the same news (fuel costs) can help one holding and hurt another."]}, {"name": "November", "title": "The AI sell-off", "est": true, "bullets": ["On 5 November, AI and data-centre stocks sold off hard. The S&P 500 fell 4.4%, its worst day since April 2025. Investors worried about expensive borrowing for data-centre builds, and the midterm results raised the prospect of pauses on new construction.", "Our AI-linked holdings felt it: in pounds, Palantir is down about 14% and Guardant about 16% for the month, and MP is lower again.", "Rolls-Royce has recovered a little (about +7%).", "To get back to the £1,400 pot, our holdings need to rise about 2.5%. To get back to August's peak they would need about 10.7%.", "Lesson: things can change quickly. The wins of the summer shrank in three weeks."]}];
+
+/* ---------- DATA: Freetrade statements (month-end). Nov = estimate from 19 Nov prices ---------- */
+var SHOW_TBC=true; /* preview only: shows yellow "confirm" tags. Set false before publishing. */
+var POT=1400, MEMBERS=14, N=10;
+var CD={ran:false,days:0};
+var LBL=['BUY','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV*'];
+var LONG=['Bought 16–17 Mar','End of March','End of April','End of May','End of June','End of July','End of August','End of September','End of October','19 Nov (estimate)'];
+var MNAME=['MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER'];
+var HOLD=[1303.95,1270.07,1288.45,1357.36,1309.33,1325.78,1404.24,1391.52,1384.16,1267.04];
+var CASH=[96.05,96.06,96.14,96.22,97.86,98.93,99.01,99.82,100.93,101.01];
+var PORT=HOLD.map(function(h,i){return Math.round((h+CASH[i])*100)/100;});
+var PM=PORT.map(function(v){return v/MEMBERS;});
+
+var HD={
+ "GH":    {sh:1.7920988, cost:119.81,val:[119.81,124.44,114.16,171.89,202.33,213.96,209.43,240.27,238.14,199.32]},
+ "CEG":   {sh:0.95222562,cost:219.65,val:[219.65,199.86,217.99,202.59,177.77,184.52,192.20,181.61,185.70,183.33]},
+ "GEV":   {sh:0.12779998,cost:79.87, val:[79.87,83.82,101.26,91.50,112.72,93.29,84.33,91.18,81.46,73.84]},
+ "RR.L":  {sh:8,         cost:98.65, val:[98.65,90.56,94.56,106.99,115.57,117.42,122.42,116.93,99.15,106.08]},
+ "OXY":   {sh:5.7614035, cost:249.56,val:[249.56,281.29,255.37,241.24,210.32,242.50,254.63,239.23,274.00,236.84]},
+ "MP":    {sh:2.6681946, cost:119.79,val:[119.79,96.84,128.88,127.65,112.45,81.29,107.34,94.76,78.42,74.73]},
+ "NATP.L":{sh:16,        cost:243.68,val:[243.68,229.86,224.80,254.91,244.51,246.62,257.98,252.42,250.46,237.98]},
+ "BA.L":  {sh:4,         cost:93.06, val:[93.06,87.76,81.41,80.94,73.34,83.72,81.76,78.46,82.68,74.14]},
+ "PLTR":  {sh:0.68807819,cost:79.88, val:[79.88,75.65,70.01,79.64,60.32,62.45,94.14,96.67,94.15,80.78]}
+};
+
+var S=S0.filter(function(s){return s.t!=="RHM"&&s.t!=="XRP";});
+S.unshift({t:"NATP.L",n:"Future of Defence ETF",c:"Defence · LSE",a:243.68,v:"CERTAIN",e:"🛡",
+  m:["anna","ben","john","paul","ian","elliot","aled","huw"],
+  i:"Defence was the club's most unanimous theme: 8 of 14 members. This accumulating ETF spreads that call across a basket of defence companies, so one contract or one headline can't make or break it."});
+S.forEach(function(s){var h=HD[s.t];s.sh=h.sh;s.cost=h.cost;s.val=h.val;});
+
+/* ---------- helpers ---------- */
+function $(id){return document.getElementById(id);}
+function gbp(v,d){d=(d==null)?2:d;return '£'+Math.abs(v).toLocaleString('en-GB',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function sg(v){return v<0?'−':'+';}
+function cls(v){return v>0.0049?'up':(v<-0.0049?'dn':'flat');}
+function pc(v,d){d=(d==null)?1:d;return sg(v)+Math.abs(v).toFixed(d)+'%';}
+function dtxt(diff,p){return sg(diff)+gbp(diff)+' ('+pc(p)+')';}
+var reduce=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+function spark(vals,base,w,h){
+  var mn=Math.min.apply(null,vals.concat([base])),mx=Math.max.apply(null,vals.concat([base])),p=3;
+  var X=function(i){return p+i*(w-2*p)/(vals.length-1);};
+  var Y=function(v){return p+(mx-v)/((mx-mn)||1)*(h-2*p);};
+  var pts=vals.map(function(v,i){return X(i).toFixed(1)+','+Y(v).toFixed(1);}).join(' ');
+  var col=vals[vals.length-1]>=base?'#4ade80':'#ff8080';
+  var dim=w>200?'':' width="'+w+'" height="'+h+'"';
+  return '<svg viewBox="0 0 '+w+' '+h+'"'+dim+' aria-hidden="true" style="display:block;overflow:visible'+(w>200?';width:100%;height:auto':'')+'">'+
+    '<line x1="'+p+'" x2="'+(w-p)+'" y1="'+Y(base).toFixed(1)+'" y2="'+Y(base).toFixed(1)+'" stroke="rgba(255,255,255,0.2)" stroke-dasharray="2 3"/>'+
+    '<polyline points="'+pts+'" fill="none" stroke="'+col+'" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'+
+    '<circle cx="'+X(vals.length-1).toFixed(1)+'" cy="'+Y(vals[vals.length-1]).toFixed(1)+'" r="3" fill="'+col+'"/></svg>';
+}
+function logo(s){
+  return LOGOS[s.t]?'<img class="lgo" src="'+LOGOS[s.t]+'" alt="'+s.t+'" onerror="this.outerHTML=\'<span class=lgo-e>'+s.e+'</span>\'">':'<span class="lgo-e">'+s.e+'</span>';
+}
+
+/* ---------- navigation ---------- */
 function go(id){
   document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on')});
   document.querySelectorAll('.nb').forEach(function(b){b.classList.remove('on')});
-  document.getElementById('pg-'+id).classList.add('on');
+  $('pg-'+id).classList.add('on');
   var pages=['about','portfolio','performance','report'];
   document.querySelectorAll('.nb')[pages.indexOf(id)].classList.add('on');
   window.scrollTo(0,0);
+  if(id==='performance'&&!CH.ran){CH.ran=true;replay();}
+  if(id==='report'&&!CD.ran){CD.ran=true;countTo($('cdays'),CD.days);}
 }
 
-document.getElementById('themes').innerHTML=TH.map(function(t){
+/* ---------- ABOUT ---------- */
+$('themes').innerHTML=TH.map(function(t){
   return '<div class="trow">'+
     '<span style="font-size:18px;flex-shrink:0">'+t.e+'</span>'+
     '<div style="flex:1;min-width:0">'+
@@ -346,7 +485,7 @@ document.getElementById('themes').innerHTML=TH.map(function(t){
   '</div>';
 }).join('');
 
-document.getElementById('members').innerHTML=M.map(function(m){
+$('members').innerHTML=M.map(function(m){
   return '<div class="mc">'+
     '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">'+
     '<span style="font-size:15px">'+m.e+'</span>'+
@@ -354,32 +493,37 @@ document.getElementById('members').innerHTML=M.map(function(m){
     '<div class="ms">'+m.s+'</div></div>';
 }).join('');
 
+/* ---------- STOCIAU ---------- */
 var af=null;
-document.getElementById('filters').innerHTML=
+$('filters').innerHTML=
   '<button class="fb on" onclick="sf(null,this)">ALL</button>'+
   M.map(function(m){return '<button class="fb" onclick="sf(\''+m.id+'\',this)">'+m.e+' '+m.name.split(' ')[0]+'</button>';}).join('');
-
 function sf(id,btn){
   af=id;
   document.querySelectorAll('.fb').forEach(function(b){b.classList.remove('on')});
   btn.classList.add('on');
   bs();
 }
-
+function shares(x){return String(Number(x.toFixed(4)));}
 function bs(){
   var list=af?S.filter(function(s){return s.m.indexOf(af)>-1}):S;
-  document.getElementById('stocks').innerHTML=list.map(function(s){
+  var html=list.map(function(s){
     var tags=s.m.map(function(mid){
       var m=M.find(function(x){return x.id===mid});
       return m?'<span class="mtag">'+m.e+' '+m.name.split(' ')[0]+'</span>':'';
     }).join('');
+    var now=s.val[N-1],diff=now-s.cost,p=diff/s.cost*100;
     return '<div class="sc" style="border-left-color:'+VC[s.v]+'">'+
-      '<div class="stop">'+
-        '<div class="sleft">'+
-        (LOGOS[s.t]?'<img src="'+LOGOS[s.t]+'" alt="'+s.t+'" style="width:32px;height:32px;object-fit:contain;border-radius:4px;background:#fff;padding:2px;flex-shrink:0" onerror="this.style.display=\'none\'">':
-          '<span style="font-size:20px;flex-shrink:0">'+s.e+'</span>')+
-          '<div><div class="sticker">'+s.t+'</div><div class="sco">'+s.n+'</div><div class="sco" style="opacity:0.5">'+s.c+'</div></div></div>'+
-        '<div class="sright"><div class="spend">PENDING</div><div class="salloc">£'+s.a+'</div></div></div>'+
+      '<div class="stop"><div class="sleft">'+logo(s)+
+        '<div><div class="sticker">'+s.t+'</div><div class="sco">'+s.n+'</div><div class="sco" style="opacity:0.5">'+s.c+'</div></div></div>'+
+        '<div class="sright"><div class="bought">BOUGHT ✓</div><div class="salloc">'+gbp(s.cost)+' in</div></div></div>'+
+      '<div class="s3">'+
+        '<div><div class="pl">SHARES</div><div class="sv">'+shares(s.sh)+'</div></div>'+
+        '<div><div class="pl">VALUE NOW*</div><div class="sv">'+gbp(now)+'</div></div>'+
+        '<div><div class="pl">SINCE BUY</div><div class="sv '+cls(diff)+'">'+pc(p)+'</div></div>'+
+      '</div>'+
+      '<div class="sparkbig">'+spark(s.val,s.cost,300,46)+'</div>'+
+      '<div class="spk-lbl"><span>BUY</span><span>NOV*</span></div>'+
       '<div class="sinf">"'+s.i+'"</div>'+
       '<div class="sbot"><div class="smems">'+tags+'</div><span class="vb v'+s.v+'">'+s.v+'</span></div>'+
       (LINKS[s.t]?'<div class="slinks">'+
@@ -387,34 +531,193 @@ function bs(){
         '<a class="slink" href="'+LINKS[s.t].news+'" target="_blank" rel="noopener">📰 Latest News</a>'+
       '</div>':'')+'</div>';
   }).join('');
+  if(!af||af==='paul'||af==='steve'){
+    html+='<div class="sc np"><div class="stop"><div class="sleft"><span class="lgo-e">🪙</span>'+
+      '<div><div class="sticker">XRP / CRYPTO</div><div class="sco">XRP ETF · WXBT as a stand-in</div></div></div>'+
+      '<div class="sright"><div class="notbought">NOT BOUGHT</div></div></div>'+
+      '<div class="sinf">The crypto pick (backed by Paul and Steve) couldn\'t be bought on Freetrade, so it never made it into the portfolio.</div></div>';
+  }
+  $('stocks').innerHTML=html;
 }
 bs();
+$('s-note').innerHTML='*VALUE NOW = 19 NOV, ESTIMATED FROM MARKET PRICES. MONTH-ENDS ARE FROM FREETRADE STATEMENTS.';
 
-document.getElementById('bars').innerHTML=S.map(function(s){
-  return '<div class="brow">'+
-    '<span style="font-family:Bebas Neue,sans-serif;font-size:13px;width:38px;color:rgba(255,255,255,0.7);flex-shrink:0">'+s.t+'</span>'+
-    '<div class="btrack"><div class="bfill" style="width:'+Math.min(s.a/250*100,100)+'%;background:'+VC[s.v]+'"></div></div>'+
-    '<span class="bamt">£'+s.a+'</span></div>';
+/* ---------- headline numbers ---------- */
+(function(){
+  var v=PORT[N-1],d=v-POT,p=d/POT*100;
+  $('s-pot').textContent=gbp(POT,0);
+  var e=$('s-val');e.textContent=gbp(v,0);e.className='pv '+cls(d);
+  var r=$('s-ret');r.textContent=pc(p);r.className='pv '+cls(d);
+  var n=$('s-note').innerHTML;
+  $('s-note').innerHTML='HOLDINGS '+gbp(HOLD[N-1],0)+' + CASH '+gbp(CASH[N-1],0)+' · '+n;
+})();
+
+/* ---------- GRAFF: per-stock rows + allocation + table ---------- */
+(function(){
+  var rows=S.slice().sort(function(a,b){return (b.val[N-1]/b.cost)-(a.val[N-1]/a.cost);});
+  $('prows').innerHTML=rows.map(function(s){
+    var now=s.val[N-1],diff=now-s.cost,p=diff/s.cost*100;
+    return '<div class="prow">'+logo(s)+
+      '<div class="pid"><div class="t">'+s.t+'</div><div class="n">'+s.n+'</div></div>'+
+      '<div class="pspk">'+spark(s.val,s.cost,84,28)+'</div>'+
+      '<div class="pval"><b>'+gbp(now)+'</b><span class="'+cls(diff)+'">'+pc(p)+'</span></div></div>';
+  }).join('');
+  $('bars').innerHTML=S.slice().sort(function(a,b){return b.cost-a.cost;}).map(function(s){
+    return '<div class="brow">'+
+      '<span style="font-family:Bebas Neue,sans-serif;font-size:13px;width:44px;color:rgba(255,255,255,0.7);flex-shrink:0">'+s.t.replace('.L','')+'</span>'+
+      '<div class="btrack"><div class="bfill" style="width:'+Math.min(s.cost/250*100,100)+'%;background:'+VC[s.v]+'"></div></div>'+
+      '<span class="bamt" style="width:40px">£'+Math.round(s.cost)+'</span></div>';
+  }).join('');
+  var th='<tr><th>DATE</th><th>HOLDINGS</th><th>CASH</th><th>FUND</th><th>PER £100</th></tr>';
+  for(var i=0;i<N;i++){th+='<tr><td>'+LONG[i]+'</td><td>'+gbp(HOLD[i])+'</td><td>'+gbp(CASH[i])+'</td><td>'+gbp(PORT[i])+'</td><td>'+gbp(PM[i])+'</td></tr>';}
+  $('tbl').innerHTML=th;
+})();
+
+/* ---------- GRAFF: animated per-member chart ---------- */
+var CH={mode:'member',ran:false,raf:0,busy:false};
+var W=460,H=220,PL=12,PR=12,PT=24,PB=12;
+function geo(){
+  var s=CH.mode==='member'?PM:PORT,b=CH.mode==='member'?100:POT;
+  var mn=Math.min.apply(null,s.concat([b])),mx=Math.max.apply(null,s.concat([b])),pad=(mx-mn)*0.14;
+  mn-=pad;mx+=pad;
+  return {s:s,b:b,X:function(i){return PL+i*(W-PL-PR)/(N-1);},Y:function(v){return PT+(mx-v)/(mx-mn)*(H-PT-PB);}};
+}
+function buildChart(){
+  var g=geo(),s=g.s,pts=[],cum=[0],i;
+  for(i=0;i<N;i++)pts.push([g.X(i),g.Y(s[i])]);
+  for(i=1;i<N;i++)cum.push(cum[i-1]+Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]));
+  var y0=g.Y(g.b),tot=cum[N-1];
+  var d='M'+pts.map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1);}).join(' L');
+  var area=d+' L'+pts[N-1][0].toFixed(1)+','+y0.toFixed(1)+' L'+pts[0][0].toFixed(1)+','+y0.toFixed(1)+' Z';
+  var imax=0;for(i=1;i<N;i++)if(s[i]>s[imax])imax=i;
+  var dash=tot.toFixed(1)+' '+tot.toFixed(1);
+  $('msvg').innerHTML=
+   '<defs><clipPath id="ca"><rect x="0" y="0" width="'+W+'" height="'+y0.toFixed(1)+'"/></clipPath>'+
+   '<clipPath id="cb"><rect x="0" y="'+y0.toFixed(1)+'" width="'+W+'" height="'+(H-y0).toFixed(1)+'"/></clipPath>'+
+   '<clipPath id="cp"><rect id="cpr" x="0" y="0" width="'+W+'" height="'+H+'"/></clipPath></defs>'+
+   '<line x1="'+PL+'" x2="'+(W-PR)+'" y1="'+y0.toFixed(1)+'" y2="'+y0.toFixed(1)+'" stroke="rgba(255,255,255,0.25)" stroke-dasharray="3 4"/>'+
+   '<text x="'+(W-PR)+'" y="'+(y0-6).toFixed(1)+'" text-anchor="end" fill="rgba(255,255,255,0.4)" font-size="9" font-family="Space Mono,monospace">'+(CH.mode==='member'?'£100 IN':'£1,400 IN')+'</text>'+
+   '<g clip-path="url(#cp)"><g clip-path="url(#ca)"><path d="'+area+'" fill="rgba(74,222,128,0.16)"/></g>'+
+   '<g clip-path="url(#cb)"><path d="'+area+'" fill="rgba(255,128,128,0.16)"/></g></g>'+
+   '<g clip-path="url(#ca)"><path id="l1" d="'+d+'" fill="none" stroke="#4ade80" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="'+dash+'"/></g>'+
+   '<g clip-path="url(#cb)"><path id="l2" d="'+d+'" fill="none" stroke="#ff8080" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="'+dash+'"/></g>'+
+   '<text id="pk" x="'+pts[imax][0].toFixed(1)+'" y="'+(pts[imax][1]-10).toFixed(1)+'" text-anchor="middle" fill="#FFD700" font-size="9" letter-spacing="1" font-family="Space Mono,monospace">PEAK '+(CH.mode==='member'?gbp(s[imax]):gbp(s[imax],0))+'</text>'+
+   '<line id="cur" y1="'+PT+'" y2="'+(H-PB)+'" stroke="rgba(255,255,255,0.35)"/>'+
+   '<circle id="dot" r="5.5" fill="#060609" stroke="#fff" stroke-width="2"/>';
+  CH.g=g;CH.pts=pts;CH.cum=cum;CH.tot=tot;CH.imax=imax;
+}
+function lenAt(f){var i=Math.min(N-2,Math.floor(f)),t=f-i;return CH.cum[i]+(CH.cum[i+1]-CH.cum[i])*t;}
+function setLine(f){
+  var off=(CH.tot-lenAt(f)).toFixed(1);
+  $('l1').style.strokeDashoffset=off;$('l2').style.strokeDashoffset=off;
+  $('cpr').setAttribute('width',CH.g.X(f).toFixed(1));
+  $('pk').style.opacity=(f>=CH.imax-0.01)?1:0;
+}
+function setCursor(f){
+  var i0=Math.min(N-1,Math.floor(f)),i1=Math.min(N-1,i0+1),t=f-i0,s=CH.g.s;
+  var v=s[i0]+(s[i1]-s[i0])*t,x=CH.g.X(f),y=CH.g.Y(v),up=v>=CH.g.b;
+  $('cur').setAttribute('x1',x.toFixed(1));$('cur').setAttribute('x2',x.toFixed(1));
+  var dot=$('dot');dot.setAttribute('cx',x.toFixed(1));dot.setAttribute('cy',y.toFixed(1));dot.setAttribute('stroke',up?'#4ade80':'#ff8080');
+  var idx=Math.round(f),b=CH.g.b,diff=v-b,p=diff/b*100;
+  var mv=$('mv');mv.textContent=CH.mode==='member'?gbp(v):gbp(v,0);mv.className='mval '+cls(diff);
+  var md=$('md');md.textContent=dtxt(diff,p)+(CH.mode==='member'?' on your £100':' on the £1,400 pot');md.className='mdelta '+cls(diff);
+  $('msub').textContent=LONG[idx].toUpperCase()+(CH.mode==='member'?' · FUND '+gbp(PORT[idx],0):' · '+gbp(PM[idx])+' PER £100');
+  var sp=$('xl').children;for(var k=0;k<sp.length;k++)sp[k].className=(k===idx)?'on':'';
+}
+function finish(){CH.busy=false;setLine(N-1);setCursor(N-1);}
+function replay(){
+  cancelAnimationFrame(CH.raf);
+  if(reduce){finish();return;}
+  CH.busy=true;var t0=null,D=4200;
+  setLine(0);setCursor(0);
+  function step(ts){
+    if(t0==null)t0=ts;
+    var t=Math.min(1,(ts-t0)/D),e=t<0.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,f=e*(N-1);
+    setLine(f);setCursor(f);
+    if(t<1)CH.raf=requestAnimationFrame(step);else finish();
+  }
+  CH.raf=requestAnimationFrame(step);
+}
+$('xl').innerHTML=LBL.map(function(l){return '<span>'+l+'</span>';}).join('');
+buildChart();finish();
+(function(){
+  var sv=$('msvg');
+  function at(e){
+    if(CH.busy)return;
+    var r=sv.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*W;
+    var f=Math.round((x-PL)/((W-PL-PR)/(N-1)));
+    setCursor(Math.max(0,Math.min(N-1,f)));
+  }
+  sv.addEventListener('pointerdown',at);
+  sv.addEventListener('pointermove',at);
+  sv.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse'&&!CH.busy)setCursor(N-1);});
+  $('replay').addEventListener('click',replay);
+  document.querySelectorAll('.seg .btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      cancelAnimationFrame(CH.raf);
+      document.querySelectorAll('.seg .btn').forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');CH.mode=b.getAttribute('data-mode');buildChart();finish();
+    });
+  });
+})();
+
+/* ---------- ADRODD: monthly posts ---------- */
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+function tbc(t){return esc(t).replace(/\{\{TBC\}\}/g,SHOW_TBC?'<span class="tbc">TO CONFIRM</span>':'').replace(/\s+([.,;])/g,'$1');}
+var PK=POSTS.length-1;
+function showPost(k){
+  PK=k;var p=POSTS[k],i=k+1;
+  var prev=PORT[i-1],mom=(PORT[i]/prev-1)*100,vp=(PORT[i]/POT-1)*100;
+  document.querySelectorAll('#chips .chip').forEach(function(c,j){c.classList.toggle('on',j===k);c.setAttribute('aria-selected',j===k);});
+  $('rmonth').textContent=MNAME[k]+' 2026';
+  $('rdays').textContent=p.title.toUpperCase()+(p.est?' · ESTIMATE':'');
+  var bul=p.bullets.filter(function(b){return b.indexOf('Lesson:')!==0;});
+  var les=p.bullets.filter(function(b){return b.indexOf('Lesson:')===0;})[0];
+  $('post').innerHTML=
+    '<div class="ptitle">'+esc(p.title)+'</div>'+
+    '<div class="tiles">'+
+      '<div class="tile"><div class="pl">FUND</div><div class="pv">'+gbp(PORT[i],0)+(p.est?'*':'')+'</div></div>'+
+      '<div class="tile"><div class="pl">PER £100</div><div class="pv">'+gbp(PM[i])+(p.est?'*':'')+'</div></div>'+
+      '<div class="tile"><div class="pl">VS POT</div><div class="pv '+cls(vp)+'">'+pc(vp)+'</div></div>'+
+      '<div class="tile"><div class="pl">'+(k===0?'SINCE BUY':'MONTH')+'</div><div class="pv '+cls(mom)+'">'+pc(mom)+'</div></div>'+
+    '</div>'+
+    '<ul class="pbul">'+bul.map(function(b){return '<li>'+tbc(b)+'</li>';}).join('')+'</ul>'+
+    (les?'<div class="notice-gold" style="margin-bottom:0">'+tbc(les)+'</div>':'')+
+    (p.est?'<div class="pnote">*ESTIMATE FROM MARKET PRICES. REPLACED BY THE FREETRADE STATEMENT WHEN IT ARRIVES.</div>':'');
+}
+$('chips').innerHTML=POSTS.map(function(p,k){
+  return '<button class="chip" role="tab" onclick="showPost('+k+')">'+LBL[k+1].replace('*','')+(p.est?'*':'')+'</button>';
 }).join('');
+showPost(PK);
 
+/* ---------- ADRODD: where we stand + countdown + Ben ---------- */
 (function(){
-  var d=[1400,1400,1400,1400,1400,1400,1400,1400,1400,1400];
-  var w=460,h=140,p=10,mn=900,mx=1800;
-  var pts=d.map(function(v,i){return (p+(i/(d.length-1))*(w-p*2))+','+(h-p-((v-mn)/(mx-mn))*(h-p*2));});
-  document.getElementById('lsvg').innerHTML=
-    '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D42B2B" stop-opacity="0.4"/><stop offset="100%" stop-color="#D42B2B" stop-opacity="0"/></linearGradient></defs>'+
-    '<path d="M '+p+','+h+' L '+pts.join(' L ')+' L '+(w-p)+','+h+' Z" fill="url(#g)"/>'+
-    '<path d="M '+pts.join(' L ')+'" fill="none" stroke="#D42B2B" stroke-width="2"/>'+
-    pts.map(function(pt){var c=pt.split(',');return '<circle cx="'+c[0]+'" cy="'+c[1]+'" r="3" fill="#D42B2B"/>';}).join('');
+  var now=PORT[N-1],h=HOLD[N-1],c=CASH[N-1];
+  var pk=0;for(var i=1;i<N;i++)if(PORT[i]>PORT[pk])pk=i;
+  var toPot=POT-now,toPeak=PORT[pk]-now;
+  var pPot=toPot/h*100,pPeak=toPeak/h*100,one=h*0.01;
+  $('outlook').innerHTML=
+    '<div class="orow"><span>Back to the '+gbp(POT,0)+' pot</span><b>holdings '+pc(pPot)+' ('+sg(toPot)+gbp(toPot,0)+')</b></div>'+
+    '<div class="orow"><span>Back to the '+MNAME[pk-1].charAt(0)+MNAME[pk-1].slice(1).toLowerCase()+' high of '+gbp(PORT[pk],0)+'</span><b>holdings '+pc(pPeak)+' ('+gbp(toPeak/MEMBERS)+' each)</b></div>'+
+    '<div class="orow"><span>Every 1% move in our holdings is worth</span><b>'+gbp(one)+' · '+Math.round(one/MEMBERS*100)+'p each</b></div>'+
+    '<div class="pnote" style="text-align:left">THIS IS ARITHMETIC, NOT A FORECAST. HOLDINGS ARE '+gbp(h,0)+' (ESTIMATE) AND CASH IS '+gbp(c,0)+'. WHAT WE SELL FOR ON THE DAY DEPENDS ON THE MARKET THAT DAY.</div>';
+  var n=new Date(),t=new Date('2026-12-20T00:00:00');
+  CD.days=Math.max(0,Math.ceil((t-new Date(n.getFullYear(),n.getMonth(),n.getDate()))/86400000));
+  $('cdays').textContent=CD.days;
+  var peakV=PM[pk],nowV=PM[N-1];
+  $('ben').innerHTML=
+    '<p><span style="color:#FFD700">Bore da, Clwb Tech. 🏴󠁧󠁢󠁷󠁬󠁳󠁿</span></p>'+
+    '<p>Nine stocks, bought on 16 and 17 March. Every month since is written up here, so you can see what moved and why.</p>'+
+    '<p>The high point was the end of '+MNAME[pk-1].charAt(0)+MNAME[pk-1].slice(1).toLowerCase()+': each £100 was worth <span class="up">'+gbp(peakV)+'</span>. After the AI sell-off in November it is about <span class="'+cls(nowV-100)+'">'+gbp(nowV)+'</span>.</p>'+
+    '<p>Sell day is Sunday 20 December, with beer and pizza for the Clwb at the Panton Arms. Yr Effaith Clwb: we win together or lose together.</p>';
 })();
+function countTo(el,n){
+  if(reduce||n<1){el.textContent=n;return;}
+  var t0=null,D=1400;
+  function st(ts){if(t0==null)t0=ts;var t=Math.min(1,(ts-t0)/D),e=1-Math.pow(1-t,3);el.textContent=Math.round(n*e);if(t<1)requestAnimationFrame(st);else el.textContent=n;}
+  requestAnimationFrame(st);
+}
 
-(function(){
-  var now=new Date();
-  document.getElementById('rmonth').textContent=now.toLocaleString('en-GB',{month:'long'}).toUpperCase()+' '+now.getFullYear();
-  var days=Math.max(0,Math.ceil((new Date('2026-12-25')-now)/86400000));
-  document.getElementById('rdays').textContent=days+' days until Christmas 2026';
-  document.getElementById('cdays').textContent=days;
-})();
 </script>
 
 </body>
