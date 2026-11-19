@@ -777,14 +777,19 @@ function countTo(el,n){
   function ret(s){return (s.val[last]/s.cost-1)*100;}
 
   /* swipe between months */
-  var post=$('post'),sx=0,sy=0,st=0;
-  post.addEventListener('touchstart',function(e){var t=e.changedTouches[0];sx=t.clientX;sy=t.clientY;st=Date.now();},{passive:true});
+  var post=$('post'),sx=0,sy=0,st=0,vert=false,y0=0;
+  post.style.touchAction='pan-y pinch-zoom';
+  post.addEventListener('touchstart',function(e){var t=e.changedTouches[0];sx=t.clientX;sy=t.clientY;st=Date.now();vert=false;y0=window.pageYOffset;},{passive:true});
+  post.addEventListener('touchmove',function(e){var t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(!vert&&(Math.abs(dy)>12&&Math.abs(dy)>Math.abs(dx)*0.6))vert=true;},{passive:true});
   post.addEventListener('touchend',function(e){
     var t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;
-    if(Date.now()-st>700||Math.abs(dx)<55||Math.abs(dy)>Math.abs(dx)*0.6)return;
+    if(vert||Math.abs(window.pageYOffset-y0)>3||Date.now()-st>600||Math.abs(dx)<80||Math.abs(dy)>Math.abs(dx)*0.35)return;
     var k=PK+(dx<0?1:-1);if(k<0||k>=POSTS.length)return;
+    var top=post.getBoundingClientRect().top;
     showPost(k);
     var c=document.querySelectorAll('#chips .chip')[k];if(c&&c.scrollIntoView)c.scrollIntoView({inline:'center',block:'nearest',behavior:reduce?'auto':'smooth'});
+    if(!reduce&&post.animate)post.animate([{opacity:.3,transform:'translateX('+(dx<0?24:-24)+'px)'},{opacity:1,transform:'none'}],{duration:220,easing:'ease-out'});
+    var nt=post.getBoundingClientRect().top;if(Math.abs(nt-top)>2)window.scrollBy(0,nt-top);
   },{passive:true});
   var chips=$('chips');
   chips.insertAdjacentHTML('afterend','<div class="swipehint">◀ SWIPE THE UPDATE TO CHANGE MONTH ▶</div>');
